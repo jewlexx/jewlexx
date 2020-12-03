@@ -1,4 +1,11 @@
 ### Hi there 👋
+My name is James, I am a student and a learning developer!
+- 😄 Pronouns: He/Him
+- 🌈 Sexuality: Bisexual
+- 🌱 I’m currently learning web development
+- 📫 How to reach me: My discord is JamesAfk#5046 or make an issue on here or something idk get creative!
+- 🔭 I’m currently working on a website to showcase my stuff
+- ⚡ Fun fact: I have made 5 playlists in the last week alone I think I might be losing my mind! [Go check it out here](https://open.spotify.com/user/yyqn444x0z9dri6hlday8uvpc)
 
 <!--
 **jamesafk/jamesafk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
