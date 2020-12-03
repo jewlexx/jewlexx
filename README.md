@@ -1,5 +1,5 @@
 ### Hi there 👋
-My name is James, I am a student and a learning developer!
+**My name is James, I am a student and a learning developer!**
 - 😄 Pronouns: He/Him
 - 🌈 Sexuality: Bisexual
 - 🌱 I’m currently learning web development
