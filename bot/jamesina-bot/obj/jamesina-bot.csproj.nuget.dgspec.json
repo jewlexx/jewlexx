@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\1notrllysure\\coding\\jamesina-bot\\jamesina-bot\\jamesina-bot\\jamesina-bot.csproj": {}
+    "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\jamesina-bot.csproj": {}
   },
   "projects": {
-    "C:\\1notrllysure\\coding\\jamesina-bot\\jamesina-bot\\jamesina-bot\\jamesina-bot.csproj": {
+    "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\jamesina-bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\1notrllysure\\coding\\jamesina-bot\\jamesina-bot\\jamesina-bot\\jamesina-bot.csproj",
+        "projectUniqueName": "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\jamesina-bot.csproj",
         "projectName": "jamesina-bot",
-        "projectPath": "C:\\1notrllysure\\coding\\jamesina-bot\\jamesina-bot\\jamesina-bot\\jamesina-bot.csproj",
+        "projectPath": "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\jamesina-bot.csproj",
         "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-        "outputPath": "C:\\1notrllysure\\coding\\jamesina-bot\\jamesina-bot\\jamesina-bot\\obj\\",
+        "outputPath": "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config",
