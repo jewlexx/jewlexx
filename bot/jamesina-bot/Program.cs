@@ -1,7 +1,7 @@
 ﻿using Discord;
+using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using System;
 using System.Threading.Tasks;
 
@@ -10,8 +10,9 @@ namespace jamesina_bot
 	public class Program
 	{
         private DiscordSocketClient client;
+        private CommandService commands;
 
-        private readonly IConfiguration config;
+        private IConfiguration config;
 
         public static void Main(string[] args)
 			=> new Program().MainAsync().GetAwaiter().GetResult();
@@ -20,27 +21,30 @@ namespace jamesina_bot
 		{
             var builder = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile(path: "Config\\config.json");
+                .AddJsonFile(path: "config.json");
        
 			config = builder.Build();
 
-            client = new DiscordSocketClient();
+            client = new DiscordSocketClient(
+                new DiscordSocketConfig{ 
+                    LogLevel = LogSeverity.Debug
+                });
 
-            new Logging.LoggingService(client, );
+            commands = new CommandService(
+				new CommandServiceConfig{
+					LogLevel = LogSeverity.Debug,
+                    CaseSensitiveCommands = false
+                });
 
-            //  You can assign your bot token to a string, and pass that in to connect.
-            //  This is, however, insecure, particularly if you plan to have your code hosted in a public repository.
-            var token = "token";
+            new Commands.CommandHandler(client, commands);
 
-            // Some alternative options would be to keep your token in an Environment Variable or a standalone file.
-            // var token = Environment.GetEnvironmentVariable("NameOfYourEnvironmentVariable");
-            // var token = File.ReadAllText("token.txt");
-            // var token = JsonConvert.DeserializeObject<AConfigurationClass>(File.ReadAllText("config.json")).Token;
+            new Logging.LoggingService(client, commands);
+
+            var token = config.GetSection("discord:token").Value;
 
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();
 
-            // Block this task until the program is closed.
             await Task.Delay(-1);
         }
 	}
