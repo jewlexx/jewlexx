@@ -1,3 +1,6 @@
 [submodule "jamesinaxx.github.io"]
 	path = jamesinaxx.github.io
 	url = git@github.com:jamesinaxx/jamesinaxx.github.io.git
+[submodule "jamesinaxxbot"]
+	path = jamesinaxxbot
+	url = git@github.com:jamesinaxx/jamesinaxxbot.git
