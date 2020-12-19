@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ll7jxcVdfzUhWBWxtwlovaADU/++GSeC1OtOXwPmOJIufG2Oy2Hg9rezKeSHnBq2+Cxl0mX4xAfgNt7tJNQ9HA==",
+  "dgSpecHash": "cWslTjm/VD3tvb39kAJCAU1HCVBBnIVbKJ1a1j+frpvbLWI8aZvmYQYcr2UAtCDTt2Pp4z0suaCZKJs/L4LfPQ==",
   "success": true,
-  "projectFilePath": "C:\\1notrllysure\\coding\\jamesina-bot\\jamesina-bot\\jamesina-bot\\jamesina-bot.csproj",
+  "projectFilePath": "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\jamesina-bot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\james\\.nuget\\packages\\discord.net\\2.2.0\\discord.net.2.2.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\discord.net.commands\\2.2.0\\discord.net.commands.2.2.0.nupkg.sha512",

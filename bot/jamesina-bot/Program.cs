@@ -2,19 +2,28 @@
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
+using System;
 using System.Threading.Tasks;
 
 namespace jamesina_bot
 {
 	public class Program
 	{
-		public static void Main(string[] args)
-			=> new Program().MainAsync().GetAwaiter().GetResult();
-
         private DiscordSocketClient client;
+
+        private readonly IConfiguration config;
+
+        public static void Main(string[] args)
+			=> new Program().MainAsync().GetAwaiter().GetResult();
 
         public async Task MainAsync()
 		{
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile(path: "Config\\config.json");
+       
+			config = builder.Build();
+
             client = new DiscordSocketClient();
 
             new Logging.LoggingService(client, );
