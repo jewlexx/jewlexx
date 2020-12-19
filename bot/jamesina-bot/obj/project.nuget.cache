@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cWslTjm/VD3tvb39kAJCAU1HCVBBnIVbKJ1a1j+frpvbLWI8aZvmYQYcr2UAtCDTt2Pp4z0suaCZKJs/L4LfPQ==",
+  "dgSpecHash": "CacttlRRbP9/+DhKRlQVIIisAuBcWClAqpYsLNosUTgvqxvyvzevmM5Zw50uCF093GyjcjQowJeJxpmwE1y5Ew==",
   "success": true,
   "projectFilePath": "C:\\1notrllysure\\jamesinaxx\\bot\\jamesina-bot\\jamesina-bot.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\james\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "C:\\Users\\james\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\james\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
