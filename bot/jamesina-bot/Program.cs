@@ -32,6 +32,7 @@ namespace jamesina_bot
 
             commands = new CommandService(
 				new CommandServiceConfig{
+                    
 					LogLevel = LogSeverity.Debug,
                     CaseSensitiveCommands = false
                 });
