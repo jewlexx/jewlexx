@@ -1,4 +1,4 @@
-### Hi there 👋
+# Hi there 👋
 
 **My name is James, I am a student and a learning developer!**
 
