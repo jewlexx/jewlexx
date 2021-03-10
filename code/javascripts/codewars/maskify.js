@@ -18,3 +18,10 @@ function maskify(cc) {
   }
   return mask();
 }
+
+// Better version
+function maskifyBetter(cc) {
+  return cc.slice(0, -4).replace(/./g, "#") + cc.slice(-4);
+}
+
+module.exports.maskify = maskifyBetter;

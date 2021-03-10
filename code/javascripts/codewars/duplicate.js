@@ -16,4 +16,15 @@ function duplicateEncode(word) {
   return returnString;
 }
 
-console.log(duplicateEncode("xwwR@wwvwwdwaeww"));
+// Better version
+function duplicateEncodeBetter(word) {
+  return word
+    .toLowerCase()
+    .split("")
+    .map(function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? "(" : ")";
+    })
+    .join("");
+}
+
+module.exports.duplicateEncode = duplicateEncodeBetter;
