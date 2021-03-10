@@ -3,11 +3,11 @@
  * @param {string} word
  */
 function duplicateEncode(word) {
+  word = word.toLowerCase();
   let returnString = "";
   for (let i = 0; i < word.length; i++) {
-    const tempWord = word.substring(0, i) + "x" + word.substring(i + 1);
-    const letterSearch = tempWord.search(word[i]);
-    if (letterSearch == -1) {
+    const tempWord = word.substring(0, i) + "" + word.substring(i + 1);
+    if (!tempWord.includes(word[i])) {
       returnString += "(";
     } else {
       returnString += ")";
@@ -16,4 +16,4 @@ function duplicateEncode(word) {
   return returnString;
 }
 
-console.log(duplicateEncode("Success"));
+console.log(duplicateEncode("xwwR@wwvwwdwaeww"));
