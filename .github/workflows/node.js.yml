@@ -31,6 +31,5 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: dist-without-markdown
           path: |
             ./code/javascripts/npm/dist
