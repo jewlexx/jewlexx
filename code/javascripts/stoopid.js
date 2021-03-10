@@ -1,8 +1,18 @@
-// Look... if you can get this into someone's chrome console... it'll crash their webpage in like a minute (change the 10000 to something smaller if you want it to crash quicker)
-let i = "There is a virus...\n";
-function thisIsDumb() {
-  document.getElementsByTagName("*")[0].textContent = i;
-  i = i + i;
-}
+/**
+ * Look... I hate everything about this script... It kills me that it even exists... But if you really wanna crash someone's browser, copy and paste it into the chromium console
+ *
+ * OOOOOO and do it when they leave and they come back super confused!!!
+ *
+ * **BUT DON'T DO THIS!!!**
+ *
+ * *But 'tis pretty funny*
+ * @param {string} string
+ * @param {Number} timeout
+ */
+const thisIsDumb = (string = "There is a virus", timeout = 1000) =>
+  setInterval(
+    (document.getElementsByTagName("*")[0].textContent += string),
+    timeout
+  );
 
-setInterval(thisIsDumb, 10000);
+export { thisIsDumb };

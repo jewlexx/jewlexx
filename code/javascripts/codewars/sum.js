@@ -1,3 +1,9 @@
+/**
+ * Adds values A and B, as well as all the numbers in between, together and returns that final sum
+ * @param {Number} a
+ * @param {Number} b
+ * @returns {Number} The final sum
+ */
 function getSum(a, b) {
   if (a == b) {
     return a;
@@ -23,4 +29,4 @@ const GetSumBetter = (a, b) => {
   return ((max - min + 1) * (min + max)) / 2;
 };
 
-export { GetSumBetter as getSum };
+export { getSum };

@@ -1,3 +1,7 @@
+/**
+ * Gets the current time in a stupid format that you can do with so many other things like Moment.js or Day.js but noooo I had to do it myself cuz why? Cuz apparently I hate myself...
+ * @returns {string} The current time
+ */
 async function getTime() {
   const date = new Date();
 

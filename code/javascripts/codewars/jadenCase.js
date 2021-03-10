@@ -1,3 +1,7 @@
+/**
+ * Turns the given string into Jaden Case
+ * @returns {string} The given string in Jaden Case
+ */
 String.prototype.toJadenCase = function () {
   let mainArray = [];
   this.split(" ").forEach((string) => {
