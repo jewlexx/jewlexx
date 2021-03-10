@@ -1,0 +1,17 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build ../index.js -m",
+    "build:watch": "ncc build ../index.js -m -w",
+    "test": "node ../tests/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ncc": "^0.3.6"
+  }
+}
