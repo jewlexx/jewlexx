@@ -10,4 +10,29 @@
  * (you don't want to be early or late!)
  * and will, of course, return you to your starting point. Return false otherwise.
  */
-const isValidWalk = (walk) => walk.length === 10;
+/**
+ *
+ * @param {array} walk
+ * @returns
+ */
+const isValidWalk = (walk) => {
+  return (
+    walk.length === 10 &&
+    walk.filter(function (x) {
+      return x === "n";
+    }).length ===
+      walk.filter(function (x) {
+        return x === "s";
+      }).length &&
+    walk.filter(function (x) {
+      return x === "w";
+    }).length.length ===
+      walk.filter(function (x) {
+        return x === "e";
+      }).length.length
+  );
+};
+
+console.log(isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]));
+
+console.log(isValidWalk(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]));
