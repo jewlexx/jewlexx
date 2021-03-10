@@ -27,3 +27,5 @@ async function getTime() {
 
   return `${hour}:${minute}:${second}`;
 }
+
+export { getTime };
