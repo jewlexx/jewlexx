@@ -27,4 +27,4 @@ function duplicateEncodeBetter(word) {
     .join("");
 }
 
-module.exports.duplicateEncode = duplicateEncodeBetter;
+export { duplicateEncodeBetter as duplicateEncode };
