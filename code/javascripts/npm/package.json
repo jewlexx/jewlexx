@@ -1,0 +1,12 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/ncc.js",
+    "build:watch": "ncc build ../index.js -m -w",
+    "test": "node ../tests/test.js"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@vercel/ncc": "^0.27.0"
+  }
+}

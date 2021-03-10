@@ -1,5 +1,8 @@
-// Masks all but the last 4 characters of a string with hashtags
-// unless the string is shorter than 4 characters in which case it does not mask it
+/**
+ * Masks all but the last 4 characters of a string with hashtags
+ * @param {string} cc
+ * @returns {string} The masked string
+ */
 function maskify(cc) {
   const ccBack = cc;
   if (cc.length <= 4) {

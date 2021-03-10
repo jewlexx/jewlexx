@@ -1,6 +1,7 @@
 /**
- *
+ * "(" if the text has no other occurrences or ")" if it does
  * @param {string} word
+ * @returns {string} The encoded string
  */
 function duplicateEncode(word) {
   word = word.toLowerCase();
@@ -21,10 +22,10 @@ function duplicateEncodeBetter(word) {
   return word
     .toLowerCase()
     .split("")
-    .map(function (a, i, w) {
+    .map(function (a, _i, w) {
       return w.indexOf(a) == w.lastIndexOf(a) ? "(" : ")";
     })
     .join("");
 }
 
-export { duplicateEncodeBetter as duplicateEncode };
+export { duplicateEncode };

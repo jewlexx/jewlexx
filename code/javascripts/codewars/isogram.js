@@ -1,16 +1,8 @@
 /**
- *
+
+ * Checks if the given string is an isogram (there are no repeating letters)
  * @param {string} str
  */
-function isIsogram(str) {
-  str.toLowerCase();
-  for (let i = 0; i < str.length; i++) {
-    const tempString = str.replace(str[i], "");
-    if (tempString.includes(str[i])) {
-      return false;
-    }
-  }
-  return true;
-}
+const isIsogram = (str) => str.split("").every((c, i) => str.indexOf(c) == i);
 
-console.log(isIsogram("isogram"));
+export { isIsogram };
