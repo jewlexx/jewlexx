@@ -1,6 +1,5 @@
 // A compilation of all my scripts and their code
 
-require("./codewars/jadenCase");
 const { arrayDiff } = require("./codewars/array.diff");
 const { century } = require("./codewars/century");
 const { duplicateEncode } = require("./codewars/duplicate");
