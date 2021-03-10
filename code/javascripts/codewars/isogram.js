@@ -2,4 +2,5 @@
  * Checks if the given string is an isogram (there are no repeating letters)
  * @param {string} str
  */
-function isIsogram(str) {}
+const isIsogram = (str) => (str) =>
+  str.split("").every((c, i) => str.indexOf(c) == i);
