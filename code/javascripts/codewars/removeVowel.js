@@ -1,5 +1,5 @@
 /**
- *
+ * Removes all vowels from the string
  * @param {string} str
  * @returns
  */
@@ -9,4 +9,4 @@ const disemvowel = (str) =>
     .filter((value) => !["a", "e", "i", "o", "u"].includes(value.toLowerCase()))
     .join("");
 
-console.log(disemvowel("This website is for losers LOL!"));
+export { disemvowel };
