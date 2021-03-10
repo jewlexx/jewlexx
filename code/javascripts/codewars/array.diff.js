@@ -1,14 +1,11 @@
+/**
+ * Returns the A as an array without all the characters that were included in B
+ * @param {Array} a
+ * @param {Array} b
+ * @returns {Array}
+ */
 function arrayDiff(a, b) {
-  b.forEach((value) => {
-    while (a.includes(value)) {
-      a.splice(a.indexOf(value), 1);
-    }
-  });
-  return a;
-}
-
-function array_diff(a, b) {
   return a.filter((e) => !b.includes(e));
 }
 
-export { array_diff as arrayDiff };
+export { arrayDiff };
