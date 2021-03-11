@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-const devMode = process.env.DEV.trim() == "true";
+const devEnv = process.env.DEV || "false";
+const devMode = devEnv.trim() === "true";
 
 const config = {
   entry: "./assets/web/javascripts/index.js",
@@ -13,7 +14,12 @@ const config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
       },
     ],
   },
