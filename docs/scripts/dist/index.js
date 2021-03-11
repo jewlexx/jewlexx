@@ -23,10 +23,9 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /*!**************************!*\
   !*** ./scripts/index.js ***!
   \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nvar myloc = window.location.href;\r\nvar locarray = myloc.split(\"/\");\r\ndelete locarray[locarray.length - 1];\r\nvar arraytext = locarray.join(\"/\");\r\n\r\nconsole.log(arraytext);\r\n/*\r\nconsole.log(fileList);\r\nfileList.forEach((fileName) => {\r\n  $(\".file-nav\").append(\"<li>\" + fileName + \"</li>\");\r\n});\r\nconsole.log(\"Appended with file names\");\r\n*/\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
+eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\r\n\r\n/**\r\n *\r\n * @param {string} data\r\n */\r\nfunction dataStuff(data) {\r\n  console.log(data);\r\n  data.split(\" | \").forEach((fileName) => {\r\n    $(\".file-nav\").append(\"<li>\" + fileName.replace(\".js\", \"\") + \"</li>\");\r\n  });\r\n}\r\n\r\n$.ajax(\r\n  \"https://raw.githubusercontent.com/jamesinaxx/jamesinaxx/public/docs/files.txt\"\r\n).then(dataStuff);\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
 
 /***/ })
 
@@ -54,47 +53,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
