@@ -8,7 +8,7 @@ console.log("Initialized javascript");
  * @param {string} data
  */
 function dataStuff(data) {
-  console.log(data);
+  console.log("List of files:\n" + data);
   data.split(" | ").forEach((fileName) => {
     $(".hide-on-load").hide();
     $(".file-nav").append(
@@ -20,4 +20,4 @@ function dataStuff(data) {
   });
 }
 
-$.ajax("https://jamesinaxx.github.io/jamesinaxx/files.txt").then(dataStuff);
+$.ajax("./files.txt").then(dataStuff);
