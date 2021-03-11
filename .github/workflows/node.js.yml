@@ -32,5 +32,5 @@ jobs:
           name: dist
           path: |
             ./code/javascripts/npm/dist
-      - run: npm run build --if-present
+      - run: npm run deploy --if-present
         working-directory: ./docs
