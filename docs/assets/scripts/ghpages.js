@@ -9,7 +9,7 @@ require("gh-pages").publish(
       name: "Nerdy Nerd McNerd",
       email: "DAMNTHISBITCHISANERD@NERDALERT.COM",
     },
-    silent: require("./webpack.config").mode === "production",
+    silent: false,
   },
   (err) => {
     if (err === undefined) {
@@ -20,5 +20,6 @@ require("gh-pages").publish(
       "Failed to publish to github pages... More output below for diagnosing the issue"
     );
     console.error(err);
+    process.exit(1);
   }
 );
