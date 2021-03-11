@@ -26,7 +26,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconsole.log(fileList);\r\nfileList.forEach((fileName) => {\r\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".file-nav\").append(\"<li>\" + fileName + \"</li>\");\r\n});\r\nconsole.log(\"Appended with file names\");\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nvar myloc = window.location.href;\r\nvar locarray = myloc.split(\"/\");\r\ndelete locarray[locarray.length - 1];\r\nvar arraytext = locarray.join(\"/\");\r\n\r\nconsole.log(arraytext);\r\n/*\r\nconsole.log(fileList);\r\nfileList.forEach((fileName) => {\r\n  $(\".file-nav\").append(\"<li>\" + fileName + \"</li>\");\r\n});\r\nconsole.log(\"Appended with file names\");\r\n*/\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
 
 /***/ })
 
