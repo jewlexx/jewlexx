@@ -14,7 +14,7 @@ const config = {
       },
     ],
   },
-  watch: false,
+  watch: this.mode === "development",
   mode: "development",
   output: {
     path: path.resolve(__dirname, "../dist"),
@@ -25,9 +25,5 @@ const config = {
     }),
   ],
 };
-
-if (config.mode === "development") {
-  config.watch = true;
-}
 
 module.exports = config;
