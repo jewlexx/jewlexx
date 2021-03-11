@@ -1,4 +1,10 @@
 const $ = require("jquery");
+const fs = require("fs");
+const root = require("app-root-path");
 
-$(".file-nav").append("<li>Test</li>");
-console.log("Appended with link");
+fs.readdirSync(root.resolve("./code/javascripts/codewars")).forEach(
+  (fileName) => {
+    $(".file-nav").append("<li>" + fileName + "</li>");
+  }
+);
+console.log("Appended with file names");
