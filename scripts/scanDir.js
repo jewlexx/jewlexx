@@ -7,3 +7,5 @@ fs.writeFileSync(
     .readdirSync(path.join(__dirname, "../code/javascripts/codewars"))
     .join(" | ")
 );
+
+console.log("Wrote to " + path.resolve(__dirname, "../files.txt"));
