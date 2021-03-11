@@ -12,6 +12,7 @@ const { countSheeps } = require("./codewars/sheepCount");
 const { getSum } = require("./codewars/sum");
 const { add } = require("./codewars/sumButNoOperators");
 const { isValidWalk } = require("./codewars/validWalk");
+const { findNextSquare } = require("./codewars/findNextSquare");
 
 export {
   arrayDiff,
@@ -26,4 +27,5 @@ export {
   getSum,
   add,
   isValidWalk,
+  findNextSquare,
 };
