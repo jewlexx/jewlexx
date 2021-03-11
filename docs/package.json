@@ -1,26 +1,13 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "node ../scripts/scanDir.js && webpack --config=assets/scripts/webpack.config.js",
     "build:watch": "set DEV=true && npm run build",
-    "deploy": "npm run build && node assets/scripts/ghpages.js",
-    "test": "set DEV=true && node assets/scripts/test.js"
+    "deploy": "npm run build && node assets/scripts/ghpages.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
-    "@babel/preset-react": "^7.12.13",
-    "@types/node": "^14.14.33",
-    "app-root-path": "^3.0.0",
     "babel-loader": "^8.2.2",
-    "dotenv": "^8.2.0",
-    "fs-web": "^1.0.1",
     "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^5.3.1",
     "jquery": "^3.6.0",
