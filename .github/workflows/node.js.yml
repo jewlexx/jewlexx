@@ -32,5 +32,3 @@ jobs:
           name: dist
           path: |
             ./code/javascripts/npm/dist
-      - run: npm i -g cross-env && npm ci && npm run deploy --if-present
-        working-directory: ./docs
