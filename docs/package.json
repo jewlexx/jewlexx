@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config=./scripts/webpack-scripts/webpack.config.js",
+    "build": "node ../scripts/scanDir.js && webpack --config=./scripts/webpack-scripts/webpack.config.js",
     "build:watch": "node scripts/compileW.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
