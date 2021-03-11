@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const ncc = require("@vercel/ncc");
-ncc(path.join(__dirname, "../../index"), {
+require("@vercel/ncc")(path.join(__dirname, "../../index"), {
   minify: true,
   watch: false,
 }).then(({ code, map, assets }) => {
