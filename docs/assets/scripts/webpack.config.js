@@ -1,6 +1,9 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const devMode = process.env.DEV.trim() == "true";
 
 const config = {
+  entry: "./assets/web/javascripts/index.js",
   module: {
     rules: [
       {
@@ -14,10 +17,11 @@ const config = {
       },
     ],
   },
-  watch: this.mode === "development",
-  mode: "development",
+  watch: devMode,
+  mode: devMode ? "development" : "production",
   output: {
     path: path.resolve(__dirname, "../dist"),
+    filename: "index.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
