@@ -1,15 +1,16 @@
-import $ from "jquery";
+const $ = require("jquery");
 
-var myloc = window.location.href;
-var locarray = myloc.split("/");
-delete locarray[locarray.length - 1];
-var arraytext = locarray.join("/");
+/**
+ *
+ * @param {string} data
+ */
+function dataStuff(data) {
+  console.log(data);
+  data.split(" | ").forEach((fileName) => {
+    $(".file-nav").append("<li>" + fileName.replace(".js", "") + "</li>");
+  });
+}
 
-console.log(arraytext);
-/*
-console.log(fileList);
-fileList.forEach((fileName) => {
-  $(".file-nav").append("<li>" + fileName + "</li>");
-});
-console.log("Appended with file names");
-*/
+$.ajax(
+  "https://raw.githubusercontent.com/jamesinaxx/jamesinaxx/public/docs/files.txt"
+).then(dataStuff);
