@@ -1,7 +1,7 @@
 const $ = require("jquery");
 import "../styles/index.scss";
 
-console.log("Init");
+console.log("Initialized javascript");
 
 /**
  *
@@ -10,7 +10,13 @@ console.log("Init");
 function dataStuff(data) {
   console.log(data);
   data.split(" | ").forEach((fileName) => {
-    $(".file-nav").append("<li>" + fileName.replace(".js", "") + "</li>");
+    $(".hide-on-load").hide();
+    $(".file-nav").append(
+      `<a href="https://github.com/jamesinaxx/jamesinaxx/blob/public/code/javascripts/codewars/${fileName}" target="_blank">` +
+        fileName.replace(".js", "") +
+        "</a>" +
+        "<br>"
+    );
   });
 }
 
