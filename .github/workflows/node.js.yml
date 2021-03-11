@@ -35,4 +35,5 @@ jobs:
       - run: node scripts/scanDir.js
       - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
         with:
+          add: "docs"
           message: "Updated repo from build"
