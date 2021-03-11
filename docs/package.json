@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node ../scripts/scanDir.js && webpack --config=scripts/building/webpack.config.js",
     "build:watch": "node scripts/compileW.js",
+    "publish": "npm run build && node assets/scripts/ghpages.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
