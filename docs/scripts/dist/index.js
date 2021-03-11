@@ -25,7 +25,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\r\n\r\n/**\r\n *\r\n * @param {string} data\r\n */\r\nfunction dataStuff(data) {\r\n  console.log(data);\r\n  data.split(\" | \").forEach((fileName) => {\r\n    $(\".file-nav\").append(\"<li>\" + fileName.replace(\".js\", \"\") + \"</li>\");\r\n  });\r\n}\r\n\r\n$.ajax(\r\n  \"https://raw.githubusercontent.com/jamesinaxx/jamesinaxx/public/docs/files.txt\"\r\n).then(dataStuff);\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
+eval("const $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\r\n\r\n/**\r\n *\r\n * @param {string} data\r\n */\r\nfunction dataStuff(data) {\r\n  console.log(data);\r\n  data.split(\" | \").forEach((fileName) => {\r\n    $(\".file-nav\").append(\"<li>\" + fileName.replace(\".js\", \"\") + \"</li>\");\r\n  });\r\n}\r\n\r\n$.ajax(\"https://jamesinaxx.github.io/jamesinaxx/files.txt\").then(dataStuff);\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
 
 /***/ })
 

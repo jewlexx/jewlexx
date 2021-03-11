@@ -11,6 +11,4 @@ function dataStuff(data) {
   });
 }
 
-$.ajax(
-  "https://raw.githubusercontent.com/jamesinaxx/jamesinaxx/public/docs/files.txt"
-).then(dataStuff);
+$.ajax("https://jamesinaxx.github.io/jamesinaxx/files.txt").then(dataStuff);
