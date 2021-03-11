@@ -1,6 +1,8 @@
 const $ = require("jquery");
 import "../styles/index.scss";
 
+console.log("Init");
+
 /**
  *
  * @param {string} data
