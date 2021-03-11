@@ -1,4 +1,5 @@
 const $ = require("jquery");
+import "../styles/index.scss";
 
 /**
  *
