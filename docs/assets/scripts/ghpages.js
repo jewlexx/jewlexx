@@ -1,5 +1,6 @@
+const path = require("path");
 require("gh-pages").publish(
-  "../dist",
+  path.resolve(__dirname, "../", "dist"),
   {
     repo: "https://github.com/jamesinaxx/jamesinaxx.git",
     dotfiles: true,
@@ -11,7 +12,13 @@ require("gh-pages").publish(
     silent: require("./webpack.config").mode === "production",
   },
   (err) => {
-    console.error("Failed to publish to github pages!!!");
+    if (err === undefined) {
+      console.log("Successfully published to GitHub Pages");
+      process.exit(0);
+    }
+    console.error(
+      "Failed to publish to github pages... More output below for diagnosing the issue"
+    );
     console.error(err);
   }
 );
