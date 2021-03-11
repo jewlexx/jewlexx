@@ -9,39 +9,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/fs-web/dist/cjs/core.js":
-/*!**********************************************!*\
-  !*** ./node_modules/fs-web/dist/cjs/core.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-eval("/*fs-web@1.0.0#core*/\n\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.readFile = readFile;\nexports.readString = readString;\nexports.writeFile = writeFile;\nexports.removeFile = removeFile;\nexports.readdir = readdir;\nexports.mkdir = mkdir;\nexports.rmdir = rmdir;\nfunction _interopRequireDefault(obj) {\n    return obj && obj.__esModule ? obj : { 'default': obj };\n}\nvar _path = __webpack_require__(/*! path */ \"./node_modules/path/index.js\");\nvar _path2 = _interopRequireDefault(_path);\nvar _directory_entry = __webpack_require__(/*! ./directory_entry.js */ \"./node_modules/fs-web/dist/cjs/directory_entry.js\");\nvar _directory_entry2 = _interopRequireDefault(_directory_entry);\nfunction ab2str(buf) {\n    return String.fromCharCode.apply(null, new Uint16Array(buf));\n}\nfunction str2ab(str) {\n    var buf = new ArrayBuffer(str.length * 2);\n    var bufView = new Uint16Array(buf);\n    for (var i = 0, strLen = str.length; i < strLen; i++) {\n        bufView[i] = str.charCodeAt(i);\n    }\n    return buf;\n}\nvar DB_NAME = window.location.host + '_filesystem', OS_NAME = 'files', DIR_IDX = 'dir';\nfunction init(callback) {\n    var req = window.indexedDB.open(DB_NAME, 1);\n    req.onupgradeneeded = function (e) {\n        var db = e.target.result;\n        var objectStore = db.createObjectStore(OS_NAME, { keyPath: 'path' });\n        objectStore.createIndex(DIR_IDX, 'dir', { unique: false });\n    };\n    req.onsuccess = function (e) {\n        callback(e.target.result);\n    };\n}\nfunction initOS(type, callback) {\n    init(function (db) {\n        var trans = db.transaction([OS_NAME], type), os = trans.objectStore(OS_NAME);\n        callback(os);\n    });\n}\nvar readFrom = function readFrom(fileName) {\n    return new Promise(function (resolve, reject) {\n        initOS('readonly', function (os) {\n            var req = os.get(fileName);\n            req.onerror = reject;\n            req.onsuccess = function (e) {\n                var res = e.target.result;\n                if (res && res.data) {\n                    resolve(res.data);\n                } else {\n                    reject('File not found');\n                }\n            };\n        });\n    });\n};\nfunction readFile(fileName) {\n    return readFrom(fileName).then(function (data) {\n        if (!(data instanceof ArrayBuffer)) {\n            data = str2ab(data.toString());\n        }\n        return data;\n    });\n}\nfunction readString(fileName) {\n    return readFrom(fileName).then(function (data) {\n        if (data instanceof ArrayBuffer) {\n            data = ab2str(data);\n        }\n        return data;\n    });\n}\n;\nfunction writeFile(fileName, data) {\n    return new Promise(function (resolve, reject) {\n        initOS('readwrite', function (os) {\n            var req = os.put({\n                'path': fileName,\n                'dir': _path2['default'].dirname(fileName),\n                'type': 'file',\n                'data': data\n            });\n            req.onerror = reject;\n            req.onsuccess = function (e) {\n                resolve();\n            };\n        });\n    });\n}\n;\nfunction removeFile(fileName) {\n    return new Promise(function (resolve) {\n        initOS('readwrite', function (os) {\n            var req = os['delete'](fileName);\n            req.onerror = req.onsuccess = function (e) {\n                resolve();\n            };\n        });\n    });\n}\n;\nfunction withTrailingSlash(path) {\n    var directoryWithTrailingSlash = path[path.length - 1] === '/' ? path : path + '/';\n    return directoryWithTrailingSlash;\n}\nfunction readdir(directoryName) {\n    return new Promise(function (resolve, reject) {\n        initOS('readonly', function (os) {\n            var dir = _path2['default'].dirname(withTrailingSlash(directoryName));\n            var idx = os.index(DIR_IDX);\n            var range = IDBKeyRange.only(dir);\n            var req = idx.openCursor(range);\n            req.onerror = function (e) {\n                reject(e);\n            };\n            var results = [];\n            req.onsuccess = function (e) {\n                var cursor = e.target.result;\n                if (cursor) {\n                    var value = cursor.value;\n                    var entry = new _directory_entry2['default'](value.path, value.type);\n                    results.push(entry);\n                    cursor['continue']();\n                } else {\n                    resolve(results);\n                }\n            };\n        });\n    });\n}\n;\nfunction mkdir(fullPath) {\n    return new Promise(function (resolve, reject) {\n        initOS('readwrite', function (os) {\n            var dir = withTrailingSlash(_path2['default']);\n            var req = os.put({\n                'path': fullPath,\n                'dir': _path2['default'].dirname(dir),\n                'type': 'directory'\n            });\n            req.onerror = reject;\n            req.onsuccess = function (e) {\n                resolve();\n            };\n        });\n    });\n}\n;\nfunction rmdir(fullPath) {\n    return readdir(fullPath).then(function removeFiles(files) {\n        if (!files || !files.length) {\n            return removeFile(fullPath);\n        }\n        var file = files.shift(), func = file.type === 'directory' ? rmdir : removeFile;\n        return func(file.name).then(function () {\n            return removeFiles(files);\n        });\n    });\n}\n;\n\n//# sourceURL=webpack://docs/./node_modules/fs-web/dist/cjs/core.js?");
-
-/***/ }),
-
-/***/ "./node_modules/fs-web/dist/cjs/directory_entry.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/fs-web/dist/cjs/directory_entry.js ***!
-  \*********************************************************/
-/***/ ((module, exports, __webpack_require__) => {
-
-"use strict";
-eval("/*fs-web@1.0.0#directory_entry*/\n\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nfunction _interopRequireDefault(obj) {\n    return obj && obj.__esModule ? obj : { 'default': obj };\n}\nvar _path = __webpack_require__(/*! path */ \"./node_modules/path/index.js\");\nvar _path2 = _interopRequireDefault(_path);\nfunction DirectoryEntry(fullPath, type) {\n    this.path = fullPath;\n    this.name = _path2['default'].basename(fullPath);\n    this.dir = _path2['default'].dirname(fullPath);\n    this.type = type;\n}\nexports.default = DirectoryEntry;\nmodule.exports = exports['default'];\n\n//# sourceURL=webpack://docs/./node_modules/fs-web/dist/cjs/directory_entry.js?");
-
-/***/ }),
-
-/***/ "./node_modules/fs-web/dist/cjs/fs.js":
-/*!********************************************!*\
-  !*** ./node_modules/fs-web/dist/cjs/fs.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-eval("/*fs-web@1.0.0#fs*/\n\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nfunction _interopRequireWildcard(obj) {\n    if (obj && obj.__esModule) {\n        return obj;\n    } else {\n        var newObj = {};\n        if (obj != null) {\n            for (var key in obj) {\n                if (Object.prototype.hasOwnProperty.call(obj, key))\n                    newObj[key] = obj[key];\n            }\n        }\n        newObj['default'] = obj;\n        return newObj;\n    }\n}\nfunction _defaults(obj, defaults) {\n    var keys = Object.getOwnPropertyNames(defaults);\n    for (var i = 0; i < keys.length; i++) {\n        var key = keys[i];\n        var value = Object.getOwnPropertyDescriptor(defaults, key);\n        if (value && value.configurable && obj[key] === undefined) {\n            Object.defineProperty(obj, key, value);\n        }\n    }\n    return obj;\n}\nfunction _interopRequireDefault(obj) {\n    return obj && obj.__esModule ? obj : { 'default': obj };\n}\nvar _core = __webpack_require__(/*! ./core.js */ \"./node_modules/fs-web/dist/cjs/core.js\");\nvar _directory_entry = __webpack_require__(/*! ./directory_entry.js */ \"./node_modules/fs-web/dist/cjs/directory_entry.js\");\nvar _directory_entry2 = _interopRequireDefault(_directory_entry);\n_directory_entry2['default'].prototype.readFile = function (callback) {\n    if (this.type !== 'file') {\n        throw new TypeError('Not a file.');\n    }\n    return (0, _core.readFile)(this.path, callback);\n};\n_defaults(exports, _interopRequireWildcard(_core));\nexports.DirectoryEntry = _directory_entry2['default'];\n\n//# sourceURL=webpack://docs/./node_modules/fs-web/dist/cjs/fs.js?");
-
-/***/ }),
-
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -52,16 +19,6 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
-/***/ "./node_modules/path/index.js":
-/*!************************************!*\
-  !*** ./node_modules/path/index.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-eval("\r\nexports.basename = function(path){\r\n  return path.split('/').pop();\r\n};\r\n\r\nexports.dirname = function(path){\r\n  return path.split('/').slice(0, -1).join('/') || '.'; \r\n};\r\n\r\nexports.extname = function(path){\r\n  var base = exports.basename(path);\r\n  if (!~base.indexOf('.')) return '';\r\n  var ext = base.split('.').pop();\r\n  return '.' + ext;\r\n};\n\n//# sourceURL=webpack://docs/./node_modules/path/index.js?");
-
-/***/ }),
-
 /***/ "./scripts/index.js":
 /*!**************************!*\
   !*** ./scripts/index.js ***!
@@ -69,7 +26,7 @@ eval("\r\nexports.basename = function(path){\r\n  return path.split('/').pop();\
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\nconst path = process.env.BASEDIR;\r\n__webpack_require__(/*! fs-web */ \"./node_modules/fs-web/dist/cjs/fs.js\").readdir(path + \"/code/javascripts/codewars\")\r\n  .then((fileList) => {\r\n    console.log(fileList);\r\n    fileList.forEach((fileName) => {\r\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".file-nav\").append(\"<li>\" + fileName + \"</li>\");\r\n    });\r\n    console.log(\"Appended with file names\");\r\n  });\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconsole.log(fileList);\r\nfileList.forEach((fileName) => {\r\n  jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".file-nav\").append(\"<li>\" + fileName + \"</li>\");\r\n});\r\nconsole.log(\"Appended with file names\");\r\n\n\n//# sourceURL=webpack://docs/./scripts/index.js?");
 
 /***/ })
 
