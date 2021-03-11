@@ -5,7 +5,6 @@ const devMode = devEnv.trim() === "true";
 
 const config = {
   entry: "./assets/web/javascripts/index.js",
-  entry: "./assets/web/styles/index.scss",
   module: {
     rules: [
       {
