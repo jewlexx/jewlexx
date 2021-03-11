@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "scripts": {
-    "build": "node ../scripts/scanDir.js && webpack --config=assets/scripts/webpack.config.js",
+    "build": "set DEV=false && node ../scripts/scanDir.js && webpack --config=assets/scripts/webpack.config.js",
     "build:watch": "set DEV=true && npm run build",
     "deploy": "npm run build && node assets/scripts/ghpages.js"
   },
