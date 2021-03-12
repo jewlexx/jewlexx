@@ -1,5 +1,6 @@
-const $ = require("jquery");
 import "../styles/index.scss";
+import $ from "jquery";
+// import "./components/FileList.jsx";
 
 console.log("Initialized javascript");
 
@@ -24,4 +25,4 @@ function dataStuff(data) {
   });
 }
 
-$.ajax("./files.txt").then(dataStuff);
+$.ajax("files.txt").then(dataStuff);
