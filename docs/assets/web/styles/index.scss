@@ -17,14 +17,22 @@ body {
     font-style: italic;
   }
   ul {
-    color: #4e5d94;
     list-style-type: none;
-    a {
-      text-decoration: none;
-      color: #4e5d94;
-    }
-    a:hover {
-      color: #6e84d1;
-    }
   }
+}
+
+.js-codewars-file {
+  text-decoration: none;
+  color: #4e5d94;
+}
+.js-codewars-file:hover {
+  color: #6e84d1;
+}
+
+.js-codewars-broken {
+  text-decoration: none;
+  color: #ff0000;
+}
+.js-codewars-broken:hover {
+  color: #ff5252;
 }
