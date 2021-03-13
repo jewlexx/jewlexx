@@ -14,7 +14,7 @@ function dataStuff(data) {
     if (fileName.includes("broken")) classList = "js-codewars-broken";
     $(".hide-on-load").hide();
     $(".file-nav").append(
-      `<a href="https://github.com/jamesinaxx/jamesinaxx/blob/public/code/javascripts/codewars/${fileName}" target="_blank" class="${classList}">` +
+      `<a href="https://raw.githubusercontent.com/jamesinaxx/jamesinaxx/public/code/javascripts/codewars/${fileName}" target="_blank" class="${classList}">` +
         fileName.replace(".js", "") +
         "</a>" +
         "<br>"
