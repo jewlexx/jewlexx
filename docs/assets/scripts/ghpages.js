@@ -2,13 +2,14 @@ const path = require("path");
 require("gh-pages").publish(
   path.resolve(__dirname, "../", "dist"),
   {
-    repo: "https://github.com/jamesinaxx/jamesinaxx.git",
+    repo: "https://github.com/jamesinaxx/codewars.git",
     dotfiles: true,
     message: "Built and published to github pages",
     user: {
       name: "Nerdy Nerd McNerd",
       email: "DAMNTHISBITCHISANERD@NERDALERT.COM",
     },
+    branch: "public",
     silent: false,
   },
   (err) => {
