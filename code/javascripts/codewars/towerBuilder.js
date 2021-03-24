@@ -4,14 +4,17 @@
  */
 function towerBuilder(nFloors) {
   const baseLen = 1 + (nFloors - 1) * 2;
-  //   return baseLen;
   const tower = [];
   const mid = (baseLen - 1) / 2 + 1;
   for (let i = 1; i < nFloors + 1; i++) {
+    const spaceCount = mid - 1;
+    const spaces = spaceCount !== 0 ? " ".repeat(spaceCount) : "";
+    const str = spaces + "*".repeat(1 + (i - 1) * 2) + spaces;
     tower.push(
-      " ".repeat(mid - (1 + (i - 1) * 2 - 1 / 2) + 1) +
-        "*".repeat(1 + (i - 1) * 2) +
-        " ".repeat(mid - (1 + (i - 1) * 2 - 1 / 2) + 1)
+      str.substring(
+        (str.length - baseLen) / 2,
+        str.length - (str.length - baseLen) / 2
+      )
     );
   }
   return tower;
