@@ -13,4 +13,4 @@ function add(x, y) {
   return x;
 }
 
-export { add };
+export default add;

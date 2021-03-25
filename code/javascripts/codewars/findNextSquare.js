@@ -9,4 +9,4 @@ function findNextSquare(sq) {
   return -1;
 }
 
-export { findNextSquare };
+export default findNextSquare;

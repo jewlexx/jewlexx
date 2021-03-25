@@ -5,4 +5,4 @@
  */
 const countSheeps = (pen) => pen.filter(Boolean).length;
 
-export { countSheeps };
+export default countSheeps;

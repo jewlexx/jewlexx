@@ -9,12 +9,12 @@ function maskify(cc) {
     return cc;
   }
   function mask() {
-    let masked = "#";
+    let masked = '#';
     for (let i = 1; i < cc.length; i++) {
       if (i > cc.length - 5) {
         masked += cc[i];
       } else {
-        masked += "#";
+        masked += '#';
       }
     }
     return masked;
@@ -24,7 +24,7 @@ function maskify(cc) {
 
 // Better version
 function maskifyBetter(cc) {
-  return cc.slice(0, -4).replace(/./g, "#") + cc.slice(-4);
+  return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
 }
 
-export { maskifyBetter as maskify };
+export default maskify;

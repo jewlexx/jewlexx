@@ -5,8 +5,8 @@
  */
 const disemvowel = (str) =>
   str
-    .split("")
-    .filter((value) => !["a", "e", "i", "o", "u"].includes(value.toLowerCase()))
-    .join("");
+    .split('')
+    .filter((value) => !['a', 'e', 'i', 'o', 'u'].includes(value.toLowerCase()))
+    .join('');
 
-export { disemvowel };
+export default disemvowel;
