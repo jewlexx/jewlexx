@@ -50,3 +50,15 @@
 .lightText {
   color: rgb(143, 143, 143);
 }
+
+.showHideButton {
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  padding: auto;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.115);
+  }
+}
