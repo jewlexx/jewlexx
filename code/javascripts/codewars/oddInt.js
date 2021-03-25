@@ -16,3 +16,5 @@ function findOdd(A) {
   });
   return odd;
 }
+
+export default findOff;

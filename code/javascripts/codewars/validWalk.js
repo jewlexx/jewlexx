@@ -9,18 +9,18 @@ const isValidWalk = (walk) => {
   return (
     walk.length === 10 &&
     walk.filter(function (x) {
-      return x === "n";
+      return x === 'n';
     }).length ===
       walk.filter(function (x) {
-        return x === "s";
+        return x === 's';
       }).length &&
     walk.filter(function (x) {
-      return x === "w";
+      return x === 'w';
     }).length.length ===
       walk.filter(function (x) {
-        return x === "e";
+        return x === 'e';
       }).length.length
   );
 };
 
-export { isValidWalk };
+export default isValidWalk;

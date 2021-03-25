@@ -29,4 +29,4 @@ const GetSumBetter = (a, b) => {
   return ((max - min + 1) * (min + max)) / 2;
 };
 
-export { getSum };
+export default getSum;
