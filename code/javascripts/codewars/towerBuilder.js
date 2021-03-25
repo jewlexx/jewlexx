@@ -1,4 +1,4 @@
-/**
+/** Could be improved but yano
  *
  * @param {number} nFloors
  */
