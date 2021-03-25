@@ -1,0 +1,35 @@
+.code-projects {
+  position: relative;
+  left: calc(50% - 300px);
+  display: inline-block;
+
+  .code-file {
+    background-color: $dark-blurple;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.55);
+    transition: all 0.5s ease;
+    position: relative;
+    transition: 0.4s ease-out;
+    .text-overlay {
+      margin: 15px;
+    }
+    a {
+      color: white;
+    }
+    small {
+      color: rgb(224, 224, 224);
+    }
+    &:hover {
+      transform: translateY(-20px);
+      transition: 0.4s ease-out;
+    }
+  }
+
+  .code-file-title {
+    color: white;
+    font-weight: 300;
+    left: 20px;
+    top: 15px;
+  }
+}
