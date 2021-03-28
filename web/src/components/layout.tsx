@@ -60,7 +60,7 @@ export default function Layout({ children, home }) {
           </>
         )}
         <iframe
-          src="https://jamesinaxx.github.io/Clocks/?color=FFF&bgcolor=**transparent**&format=h:mm+A"
+          src="https://jamesinaxx.github.io/Clocks/?color=FFF&bgcolor=**transparent**&format=h:mm%20A"
           style={{ border: "none" }}
         ></iframe>
       </header>
