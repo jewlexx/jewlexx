@@ -19,6 +19,7 @@ jobs:
                   user: jamesinaxx
                   template: markdown
                   filename: README.md
+                  markdown: TEMPLATE.md
                   markdown_cache: .cache
                   config_output: markdown
                   base: header, activity, community, repositories, metadata
