@@ -17,7 +17,10 @@ jobs:
 
                   # Options
                   user: jamesinaxx
-                  template: classic
+                  template: markdown
+                  filename: README.md
+                  markdown_cache: .cache
+                  config_output: markdown
                   base: header, activity, community, repositories, metadata
                   config_timezone: Australia/Sydney
                   plugin_introduction: yes
