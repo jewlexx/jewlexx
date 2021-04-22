@@ -10,9 +10,9 @@
  * @param {Number} timeout
  */
 const virus = (string = 'There is a virus', timeout = 1000) =>
-  setInterval(
-    (document.getElementsByTagName('*')[0].textContent += string),
-    timeout
-  );
+	setInterval(
+		(document.getElementsByTagName('*')[0].textContent += string),
+		timeout
+	);
 
-export { virus };
+virus();
