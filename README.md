@@ -1,2 +1,2 @@
 # Hi
-[![Stats](github-metrics.svg)]
+[![Stats](github-metrics.svg)](#)
