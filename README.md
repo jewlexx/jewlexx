@@ -1,3 +1,1 @@
-# Hi there 👋
-
-![Metrics](https://github.com/jamesinaxx/jamesinaxx/blob/public/github-metrics.svg)
+You did not provide a valid "markdown" query parameter, which is required to use this template.
