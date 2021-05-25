@@ -18,7 +18,7 @@ export default async function handler(
 		});
 	} else {
 		res.status(405).json({
-			error: 'We do not support ANY requests other then "GET" yet',
+			error: 'We do not support ANY requests other then GET as of yet',
 		});
 	}
 }
