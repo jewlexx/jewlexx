@@ -35,31 +35,36 @@ export default function Navigation({}) {
 
 					<NavDropdown title='Social links' id='basic-nav-dropdown'>
 						<NavDropdown.Item
-							href='#action/3.1'
+							href='https://github.com/jamesinaxx'
+							target='_blank'
 							className={styles.navbarItem}>
 							<FAI icon={faGithub} colour='black' /> <p>GitHub</p>
 						</NavDropdown.Item>
 						<NavDropdown.Item
-							href='#action/3.2'
+							href='https://twitter.com/jamesinaxx'
+							target='_blank'
 							className={styles.navbarItem}>
 							<FAI icon={faTwitter} colour='#1DA1F2' />{' '}
 							<p>Twitter</p>
 						</NavDropdown.Item>
 						<NavDropdown.Item
-							href='#action/3.3'
+							href='https://twitch.tv/jamesinaxx'
+							target='_blank'
 							className={styles.navbarItem}>
 							<FAI icon={faTwitch} colour='#9146FF' />{' '}
 							<p>Twitch</p>
 						</NavDropdown.Item>
 						<NavDropdown.Item
-							href='#action/3.4'
+							href='https://www.youtube.com/channel/UCwKytulnX600TzqeJAqbO6w'
+							target='_blank'
 							className={styles.navbarItem}>
 							<FAI icon={faYoutube} colour='#FF0000' />{' '}
 							<p>YouTube</p>
 						</NavDropdown.Item>
 						<NavDropdown.Divider />
 						<NavDropdown.Item
-							href='#action/3.5'
+							href='https://linktr.ee/jamesinaxx'
+							target='_blank'
 							className={styles.navbarItem}>
 							<FAI icon={faTree} colour='green' /> <p>Linktree</p>
 						</NavDropdown.Item>
