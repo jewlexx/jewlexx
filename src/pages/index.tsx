@@ -4,7 +4,7 @@ import Layout from '../components/LayoutMain';
 export default function Main() {
 	return (
 		<Layout>
-			<div>hhhey</div>
+			<div>Coming soon!</div>
 		</Layout>
 	);
 }
