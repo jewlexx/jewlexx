@@ -3,6 +3,6 @@
  * @param {any[]} l
  * @returns {number[]}
  */
-const filterList = (l) => l.filter((value) => typeof value === 'number');
+const filterList = l => l.filter(value => typeof value === 'number');
 
 export default filterList;

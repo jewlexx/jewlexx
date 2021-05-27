@@ -4,7 +4,7 @@
  * @param {Number} year
  * @returns {Number} What century that year is in
  */
-const century = (year) =>
-  year % 100 === 0 ? Math.floor(year / 100) : Math.floor(year / 100) + 1;
+const century = year =>
+	year % 100 === 0 ? Math.floor(year / 100) : Math.floor(year / 100) + 1;
 
 export default century;

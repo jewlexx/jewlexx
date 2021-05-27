@@ -27,7 +27,8 @@ export default function NavbarComp({}) {
 					src='/images/profile.jpg'
 					width='50px'
 					alt='My profile picture'
-					className={styles.profileImage}></img>
+					className={styles.profileImage}
+				></img>
 			</Navbar.Brand>
 
 			<Navbar.Collapse id='basic-navbar-nav'>
@@ -38,27 +39,31 @@ export default function NavbarComp({}) {
 						<NavDropdown.Item
 							href='https://github.com/jamesinaxx'
 							target='_blank'
-							className={styles.navbarItem}>
+							className={styles.navbarItem}
+						>
 							<FAI icon={faGithub} colour='black' /> <p>GitHub</p>
 						</NavDropdown.Item>
 						<NavDropdown.Item
 							href='https://twitter.com/jamesinaxx'
 							target='_blank'
-							className={styles.navbarItem}>
+							className={styles.navbarItem}
+						>
 							<FAI icon={faTwitter} colour='#1DA1F2' />{' '}
 							<p>Twitter</p>
 						</NavDropdown.Item>
 						<NavDropdown.Item
 							href='https://twitch.tv/jamesinaxx'
 							target='_blank'
-							className={styles.navbarItem}>
+							className={styles.navbarItem}
+						>
 							<FAI icon={faTwitch} colour='#9146FF' />{' '}
 							<p>Twitch</p>
 						</NavDropdown.Item>
 						<NavDropdown.Item
 							href='https://www.youtube.com/channel/UCwKytulnX600TzqeJAqbO6w'
 							target='_blank'
-							className={styles.navbarItem}>
+							className={styles.navbarItem}
+						>
 							<FAI icon={faYoutube} colour='#FF0000' />{' '}
 							<p>YouTube</p>
 						</NavDropdown.Item>
@@ -66,7 +71,8 @@ export default function NavbarComp({}) {
 						<NavDropdown.Item
 							href='https://linktr.ee/jamesinaxx'
 							target='_blank'
-							className={styles.navbarItem}>
+							className={styles.navbarItem}
+						>
 							<FAI icon={faTree} colour='green' /> <p>Linktree</p>
 						</NavDropdown.Item>
 					</NavDropdown>
