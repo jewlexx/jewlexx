@@ -26,6 +26,7 @@ export default function NavbarComp({}) {
 				<img
 					src='/images/profile.jpg'
 					width='50px'
+					alt='My profile picture'
 					className={styles.profileImage}></img>
 			</Navbar.Brand>
 

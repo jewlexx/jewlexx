@@ -3,12 +3,12 @@ import Head from 'next/head';
 export default function HeadComp() {
 	return (
 		<Head>
+			<meta charSet='UTF-8' />
 			<link
 				rel='shortcut icon'
 				type='image/jpg'
 				href='/images/profile.jpg'
 			/>
-			<meta charSet='UTF-8' />
 			<meta
 				name='description'
 				content='My developer portfolio. A central place for all my code and projects'
