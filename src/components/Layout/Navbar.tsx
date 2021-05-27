@@ -19,7 +19,7 @@ const FAI = (props: { icon: any; colour: string }) => {
 	);
 };
 
-export default function Navigation({}) {
+export default function NavbarComp({}) {
 	return (
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
 			<Navbar.Brand href='#'>

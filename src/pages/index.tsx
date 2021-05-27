@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/LayoutMain';
+import Layout from '../components/Layout/_Main';
 
 export default function Main() {
 	return (
