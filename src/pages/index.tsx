@@ -1,5 +1,10 @@
 import React from 'react';
+import Layout from '../components/LayoutMain';
 
 export default function Main() {
-	return <div>hhhey</div>;
+	return (
+		<Layout>
+			<div>hhhey</div>
+		</Layout>
+	);
 }
