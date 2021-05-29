@@ -19,10 +19,10 @@ const FAI = (props: { icon: any; colour: string }) => {
 	);
 };
 
-export default function NavbarComp({}) {
+export default function NavbarComp() {
 	return (
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
-			<Navbar.Brand href='#'>
+			<Navbar.Brand href='/'>
 				<img
 					src='/images/profile.jpg'
 					width='50px'
@@ -33,7 +33,7 @@ export default function NavbarComp({}) {
 
 			<Navbar.Collapse id='basic-navbar-nav'>
 				<Nav className='mr-auto'>
-					<Nav.Link href='#home'>Home</Nav.Link>
+					<Nav.Link href='/'>Home</Nav.Link>
 
 					<NavDropdown title='Social links' id='basic-nav-dropdown'>
 						<NavDropdown.Item
