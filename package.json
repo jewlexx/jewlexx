@@ -2,7 +2,6 @@
 	"name": "jamesinaxx",
 	"version": "1.0.0",
 	"description": "My dev profile",
-	"main": "src/index.ts",
 	"repository": "https://github.com/jamesinaxx/jamesinaxx.git",
 	"author": "jamesinaxx <grassojames5@gmail.com>",
 	"license": "MIT",
