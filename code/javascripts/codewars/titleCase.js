@@ -8,7 +8,7 @@ function titleCase(title, minorWords) {
 	if (title === '') return '';
 	const titleArray = title.split(' ');
 	const returnArray = [];
-	minorWords = minorWords.split(' ').map((val) => val.toLowerCase());
+	minorWords = minorWords.split(' ').map(val => val.toLowerCase());
 	for (let i = 0; i < titleArray.length; i++) {
 		if (minorWords.includes(titleArray[i].toLowerCase()) && i !== 0)
 			returnArray.push(titleArray[i].toLowerCase());

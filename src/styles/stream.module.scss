@@ -1,0 +1,25 @@
+.main {
+	width: 100vw;
+	height: 100vh;
+	background: #23272a;
+	a {
+		color: aqua;
+	}
+}
+
+.info {
+	width: 35vw;
+	height: 35vw;
+	position: absolute;
+	background-color: #422a70;
+	border-radius: 50px;
+	top: 50%;
+	left: 50%;
+	margin: -17.5vw 0 0 -17.5vw;
+	padding: 50px;
+	color: white;
+}
+
+.title {
+	font: 500;
+}

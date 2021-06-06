@@ -5,22 +5,22 @@
  * @param {array} walk
  * @returns {Boolean} If the walk is valid or not
  */
-const isValidWalk = (walk) => {
-  return (
-    walk.length === 10 &&
-    walk.filter(function (x) {
-      return x === 'n';
-    }).length ===
-      walk.filter(function (x) {
-        return x === 's';
-      }).length &&
-    walk.filter(function (x) {
-      return x === 'w';
-    }).length.length ===
-      walk.filter(function (x) {
-        return x === 'e';
-      }).length.length
-  );
+const isValidWalk = walk => {
+	return (
+		walk.length === 10 &&
+		walk.filter(function (x) {
+			return x === 'n';
+		}).length ===
+			walk.filter(function (x) {
+				return x === 's';
+			}).length &&
+		walk.filter(function (x) {
+			return x === 'w';
+		}).length.length ===
+			walk.filter(function (x) {
+				return x === 'e';
+			}).length.length
+	);
 };
 
 export default isValidWalk;
