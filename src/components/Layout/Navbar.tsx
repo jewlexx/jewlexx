@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faTree } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import Image from 'next/image';
 
 const FAI = (props: { icon: any; colour: string }) => {
 	return (
@@ -23,12 +24,13 @@ export default function NavbarComp() {
 	return (
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
 			<Navbar.Brand href='/'>
-				<img
+				<Image
 					src='/images/profile.jpg'
-					width='50px'
+					width={50}
+					height={50}
 					alt='My profile picture'
 					className={styles.profileImage}
-				></img>
+				></Image>
 			</Navbar.Brand>
 
 			<Navbar.Collapse id='basic-navbar-nav'>
