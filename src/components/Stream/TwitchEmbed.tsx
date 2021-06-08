@@ -14,7 +14,7 @@ export default function TwitchEmbed({ channel }: EmbedProps) {
 		script.addEventListener('load', () => {
 			embed = new window.Twitch.Embed('twitch-embed', {
 				width: '100%',
-				height: '325',
+				height: '375',
 				channel: channel,
 			});
 		});
