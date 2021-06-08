@@ -1,10 +1,13 @@
 import Navbar from './Navbar';
 import Head from './Head';
 
-export default function Layout({ children }): JSX.Element {
+export default function Layout({
+	children,
+	title = 'jamesinaxx',
+}): JSX.Element {
 	return (
 		<div>
-			<Head />
+			<Head title={title} />
 
 			<Navbar />
 

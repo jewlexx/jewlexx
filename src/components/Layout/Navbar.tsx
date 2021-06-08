@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styles from '../../styles/layout.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -21,6 +22,12 @@ const FAI = (props: { icon: any; colour: string }) => {
 };
 
 export default function NavbarComp() {
+	const [active, setActive] = useState('home');
+
+	useEffect(() => {
+		setActive(window.location.pathname);
+	});
+
 	return (
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
 			<Navbar.Brand href='/'>
@@ -35,7 +42,16 @@ export default function NavbarComp() {
 
 			<Navbar.Collapse id='basic-navbar-nav'>
 				<Nav className='mr-auto'>
-					<Nav.Link href='/'>Home</Nav.Link>
+					<Nav.Link href='/' active={active === '/'}>
+						Home
+					</Nav.Link>
+
+					<Nav.Link
+						href='/stream/plan'
+						active={active === '/stream/plan'}
+					>
+						Stream Plan
+					</Nav.Link>
 
 					<NavDropdown title='Social links' id='basic-nav-dropdown'>
 						<NavDropdown.Item
