@@ -12,6 +12,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"@auth0/nextjs-auth0": "^1.4.0",
 		"dayjs": "^1.10.5",
 		"mongodb": "^3.6.9",
 		"next": "latest",
