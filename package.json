@@ -26,6 +26,7 @@
 		"@types/mongodb": "^3.6.17",
 		"@types/node": "^15.6.1",
 		"@types/react": "^17.0.8",
+		"@types/react-bootstrap": "^0.32.25",
 		"bootstrap": "4.6.0",
 		"react-bootstrap": "^1.6.0",
 		"sass": "1.32.0",
