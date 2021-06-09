@@ -4,15 +4,17 @@ import { connectToDatabase } from '../util/mongodb';
 
 export default function Main({ isConnected }) {
 	return (
-		<>
-			{isConnected ? (
-				<Layout>
-					<div>This entire site is a work in progress...</div>
-				</Layout>
+		<Layout>
+			<div>This entire site is a work in progress...</div>
+			{!isConnected ? (
+				<div>
+					Failed to connect to database. Parts of this website may not
+					work properly
+				</div>
 			) : (
-				<div>Failed to connect to database</div>
+				<div>{null}</div>
 			)}
-		</>
+		</Layout>
 	);
 }
 

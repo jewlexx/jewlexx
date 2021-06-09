@@ -1,3 +1,4 @@
+declare const window: any;
 import { useEffect } from 'react';
 
 interface EmbedProps {
