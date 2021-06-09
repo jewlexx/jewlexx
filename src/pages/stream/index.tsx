@@ -1,6 +1,5 @@
 import styles from '../../styles/stream.module.scss';
 import Layout from '../../components/Layout/_Main';
-import TwitchEmbed from '../../components/Stream/TwitchEmbed';
 
 export default function Stream() {
 	return (
@@ -20,7 +19,6 @@ export default function Stream() {
 						the upcoming week, check out my{' '}
 						<a href='/stream/plan'>plan</a>
 					</p>
-					<TwitchEmbed channel='jamesinaxx' />
 				</div>
 			</div>
 		</Layout>

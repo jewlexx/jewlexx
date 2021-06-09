@@ -1,30 +1,26 @@
-declare const window: any;
-import { useEffect } from 'react';
+const host = process.env.HOST || 'localhost';
 
 interface EmbedProps {
 	channel: string;
+	width?: string;
+	height?: string;
 }
 
-const EMBED_URL = 'https://embed.twitch.tv/embed/v1.js';
-
-export default function TwitchEmbed({ channel }: EmbedProps) {
-	useEffect(() => {
-		let embed;
-		const script = document.createElement('script');
-		script.setAttribute('src', EMBED_URL);
-		script.addEventListener('load', () => {
-			embed = new window.Twitch.Embed('twitch-embed', {
-				width: '100%',
-				height: '375',
-				channel: channel,
-			});
-		});
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, []);
-
-	return <div id='twitch-embed'></div>;
+export default function TwitchEmbed({
+	width = '100%',
+	height = '100%',
+}: EmbedProps) {
+	return (
+		<div id='twitch'>
+			<iframe
+				src={encodeURI(
+					'https://player.twitch.tv/?channel=jamesinaxx&parent=' +
+						host
+				)}
+				allowFullScreen
+				width={width}
+				height={height}
+			></iframe>
+		</div>
+	);
 }
