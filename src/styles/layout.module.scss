@@ -4,15 +4,38 @@
 	pointer-events: none;
 }
 
-.navbarItem {
-	p {
-		display: inline;
-		margin-left: 5px;
-	}
-}
-
 .userpfp {
 	float: right;
 	right: auto;
 	border-radius: 50px;
+}
+
+.navbar {
+	background-color: #333;
+	padding: 15px;
+	overflow: hidden;
+
+	.brandImage {
+		margin-right: 8px;
+		border-radius: 5px;
+		float: left;
+	}
+
+	.navitem,
+	a {
+		float: left;
+		color: #c9c3c3;
+		text-align: center;
+		padding: 14px 8px;
+		text-decoration: none;
+		font-size: 17px;
+		&:hover,
+		&.active:hover {
+			color: #fff;
+		}
+
+		&.active {
+			font-weight: bolder;
+		}
+	}
 }

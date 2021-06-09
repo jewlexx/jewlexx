@@ -34,6 +34,38 @@ export default function NavbarComp() {
 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>{error.message}</div>;
 
+	console.log(active);
+
+	const redesign = (
+		<div className={styles.navbar}>
+			<img
+				src={user.picture}
+				width={50}
+				height={50}
+				alt={'Logged in as ' + user.name}
+				className={styles.brandImage}
+			></img>
+			<a
+				className={`${styles.navitem} ${
+					active === '/' ? styles.active : ''
+				}`}
+				href='/'
+			>
+				Home
+			</a>
+			<a
+				className={`${styles.navitem} ${
+					active === '/stream/plan' ? styles.active : ''
+				}`}
+				href='/stream/plan'
+			>
+				Stream Plan
+			</a>
+		</div>
+	);
+
+	return redesign;
+
 	return (
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
 			<Navbar.Brand>
