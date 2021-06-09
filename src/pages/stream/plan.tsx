@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from '../../styles/stream.module.scss';
 import Layout from '../../components/Layout/_Main';
 import { connectToDatabase } from '../../util/mongodb';
@@ -7,11 +8,19 @@ export default function Plan({ streams }: { streams: any[] }) {
 	return (
 		<Layout>
 			{streams.map((stream, i) => (
-				<ul key={i}>
-					<h1>{stream.description}</h1>
-					<h2>{stream.game}</h2>
-					<h3>{dayjs(stream.date).format('LLL')}</h3>
-				</ul>
+				<div key={i} className={styles.streamCard}>
+					<Image
+						src={`https://static-cdn.jtvnw.net/ttv-boxart/${stream.game}.jpg?1622287396`}
+						width={62.5}
+						height={87}
+						alt={stream.game}
+						className={styles.gameImage}
+					></Image>
+					<div className={styles.streamInfo}>
+						<h1>{stream.description}</h1>
+						<h3>{dayjs(stream.date).format('LLL')}</h3>
+					</div>
+				</div>
 			))}
 		</Layout>
 	);
