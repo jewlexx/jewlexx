@@ -6,8 +6,13 @@
 
 .navbarItem {
 	p {
-		position: absolute;
 		display: inline;
 		margin-left: 5px;
 	}
+}
+
+.userpfp {
+	float: right;
+	right: auto;
+	border-radius: 50px;
 }

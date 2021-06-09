@@ -11,16 +11,13 @@ export default function TwitchEmbed({
 	height = '100%',
 }: EmbedProps) {
 	return (
-		<div id='twitch'>
-			<iframe
-				src={encodeURI(
-					'https://player.twitch.tv/?channel=jamesinaxx&parent=' +
-						host
-				)}
-				allowFullScreen
-				width={width}
-				height={height}
-			></iframe>
-		</div>
+		<iframe
+			src={encodeURI(
+				'https://player.twitch.tv/?channel=jamesinaxx&parent=' + host
+			)}
+			allowFullScreen
+			width={width}
+			height={height}
+		/>
 	);
 }

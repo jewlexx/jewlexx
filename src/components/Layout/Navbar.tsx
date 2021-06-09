@@ -7,9 +7,10 @@ import {
 	faTwitch,
 	faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { faTree } from '@fortawesome/free-solid-svg-icons';
+import { faTree, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Image from 'next/image';
+import { useUser } from '@auth0/nextjs-auth0';
 
 const FAI = (props: { icon: any; colour: string }) => {
 	return (
@@ -28,16 +29,41 @@ export default function NavbarComp() {
 		setActive(window.location.pathname);
 	});
 
+	const { user, error, isLoading } = useUser();
+
+	if (isLoading) return <div>Loading...</div>;
+	if (error) return <div>{error.message}</div>;
+
 	return (
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
-			<Navbar.Brand href='/'>
-				<Image
-					src='/images/profile.jpg'
-					width={50}
-					height={50}
-					alt='My profile picture'
-					className={styles.profileImage}
-				></Image>
+			<Navbar.Brand>
+				<Nav className='mr-auto'>
+					<NavDropdown
+						title={
+							<Image
+								src={user.picture}
+								width={50}
+								height={50}
+								alt={'Logged in as ' + user.name}
+								className={styles.profileImage}
+							></Image>
+						}
+						id='userDropdown'
+					>
+						<NavDropdown.Item className={styles.navbarItem}>
+							<FAI icon={faTwitch} colour='#9146FF' />{' '}
+							<p>Logged in as {user.name}</p>
+						</NavDropdown.Item>
+						<NavDropdown.Divider />
+						<NavDropdown.Item
+							href='/api/auth/logout'
+							className={styles.navbarItem}
+						>
+							<FAI icon={faSignOutAlt} colour='#000' />{' '}
+							<p>Logout</p>
+						</NavDropdown.Item>
+					</NavDropdown>
+				</Nav>
 			</Navbar.Brand>
 
 			<Navbar.Collapse id='basic-navbar-nav'>
