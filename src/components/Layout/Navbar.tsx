@@ -38,31 +38,40 @@ export default function NavbarComp() {
 		<Navbar bg='dark' variant='dark' className='navbar-expand-lg'>
 			<Navbar.Brand>
 				<Nav className='mr-auto'>
-					<NavDropdown
-						title={
-							<Image
-								src={user.picture}
-								width={50}
-								height={50}
-								alt={'Logged in as ' + user.name}
-								className={styles.profileImage}
-							></Image>
-						}
-						id='userDropdown'
-					>
-						<NavDropdown.Item className={styles.navbarItem}>
-							<FAI icon={faTwitch} colour='#9146FF' />{' '}
-							<p>Logged in as {user.name}</p>
-						</NavDropdown.Item>
-						<NavDropdown.Divider />
-						<NavDropdown.Item
-							href='/api/auth/logout'
-							className={styles.navbarItem}
+					{user !== undefined ? (
+						<NavDropdown
+							title={
+								<Image
+									src={user.picture}
+									width={50}
+									height={50}
+									alt={'Logged in as ' + user.name}
+									className={styles.profileImage}
+								></Image>
+							}
+							id='userDropdown'
 						>
-							<FAI icon={faSignOutAlt} colour='#000' />{' '}
-							<p>Logout</p>
-						</NavDropdown.Item>
-					</NavDropdown>
+							<NavDropdown.Item
+								className={styles.navbarItem}
+								href={'https://twitch.tv/' + user.name}
+							>
+								<FAI icon={faTwitch} colour='#9146FF' />{' '}
+								<p>Logged in as {user.name}</p>
+							</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item
+								href='/api/auth/logout'
+								className={styles.navbarItem}
+							>
+								<FAI icon={faSignOutAlt} colour='#000' />{' '}
+								<p>Logout</p>
+							</NavDropdown.Item>
+						</NavDropdown>
+					) : (
+						<a style={{ color: '#aaa' }} href='/api/auth/login'>
+							Login
+						</a>
+					)}
 				</Nav>
 			</Navbar.Brand>
 
