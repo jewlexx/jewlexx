@@ -7,7 +7,12 @@ import {
 	faTwitch,
 	faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { faTree, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+	faTree,
+	faSignOutAlt,
+	faHome,
+	faCalendarAlt,
+} from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Image from 'next/image';
 import { useUser } from '@auth0/nextjs-auth0';
@@ -39,10 +44,9 @@ export default function NavbarComp() {
 	const redesign = (
 		<div className={styles.navbar}>
 			<img
-				src={user.picture}
+				src='/images/profile.jpg'
 				width={50}
 				height={50}
-				alt={'Logged in as ' + user.name}
 				className={styles.brandImage}
 			></img>
 			<a
@@ -51,7 +55,7 @@ export default function NavbarComp() {
 				}`}
 				href='/'
 			>
-				Home
+				<FAI icon={faHome} colour='#fff' />
 			</a>
 			<a
 				className={`${styles.navitem} ${
@@ -59,8 +63,16 @@ export default function NavbarComp() {
 				}`}
 				href='/stream/plan'
 			>
-				Stream Plan
+				<FAI icon={faCalendarAlt} colour='#fff' />
 			</a>
+
+			<img
+				src={user.picture}
+				width={50}
+				height={50}
+				alt={'Logged in as ' + user.name}
+				className={styles.userpfp}
+			></img>
 		</div>
 	);
 
