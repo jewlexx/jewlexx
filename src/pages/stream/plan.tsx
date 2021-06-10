@@ -58,7 +58,7 @@ export async function getServerSideProps(context) {
 	await db.collection('streams').insertOne({
 		game: 'Minecraft',
 		description: 'Test',
-		date: '06-09-2021 10:06',
+		date: dayjs().format('MM-DD-YYYY HH:MM'),
 		endTime: null,
 	});
 
