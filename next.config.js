@@ -1,5 +1,5 @@
 module.exports = {
 	images: {
-		domains: ['cataas.com'],
+		domains: ['cataas.com', 'static-cdn.jtvnw.net', 's.gravatar.com'],
 	},
 };

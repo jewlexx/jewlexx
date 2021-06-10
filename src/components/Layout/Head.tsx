@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function HeadComp() {
+export default function HeadComp({ title }) {
 	return (
 		<Head>
 			<meta charSet='UTF-8' />
@@ -22,7 +22,7 @@ export default function HeadComp() {
 				name='viewport'
 				content='width=device-width, initial-scale=1.0'
 			/>
-			<title>jamesinaxx</title>
+			<title>{title}</title>
 		</Head>
 	);
 }

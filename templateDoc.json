@@ -1,0 +1,8 @@
+{
+	"streamTemplate": {
+		"game": "Game Name",
+		"description": "Short Stream description",
+		"date": "MM-DD-YYYY HH:MM",
+		"endTime": "MM-DD-YYYY HH:MM | NULL"
+	}
+}

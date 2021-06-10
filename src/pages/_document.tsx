@@ -1,15 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-class Doc extends Document {
-	static async getInitialProps(ctx) {
-		const initialProps = await Document.getInitialProps(ctx);
-		return { ...initialProps };
-	}
-
+class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang='en'>
-				<Head />
+				<Head></Head>
 				<body>
 					<Main />
 					<NextScript />
@@ -19,4 +14,4 @@ class Doc extends Document {
 	}
 }
 
-export default Doc;
+export default MyDocument;

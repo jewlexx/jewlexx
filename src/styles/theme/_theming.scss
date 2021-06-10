@@ -1,0 +1,13 @@
+hr {
+	size: 10px;
+	width: 100%;
+	background-color: white;
+}
+
+a {
+	transition: color 0.25s ease-in-out;
+	color: #5f9ea0;
+	&:hover {
+		color: #72c2c4;
+	}
+}

@@ -1,15 +1,18 @@
 import Head from 'next/head';
 import styles from '../styles/error.module.scss';
 
-function Error404() {
+function Error({ statusCode }) {
 	return (
 		<div className={styles.main}>
 			<Head>
-				<title>404: Page not found!</title>
+				<title>Error: {statusCode}</title>
 			</Head>
-			<h1>Apologies... this page returned a 404 page not found error!</h1>
+			<h1>
+				Apologies... this page returned a{' '}
+				{statusCode ? statusCode : 'client'} error!
+			</h1>
 			<p>
-				You can try troubleshooting it or{' '}
+				You can try googling it or{' '}
 				<a href='https://github.com/jamesinaxx/jamesinaxx/issues'>
 					let me know
 				</a>
@@ -23,4 +26,9 @@ function Error404() {
 	);
 }
 
-export default Error404;
+Error.getInitialProps = ({ res, err }) => {
+	const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+	return { statusCode };
+};
+
+export default Error;
