@@ -5,9 +5,12 @@
 }
 
 .userpfp {
-	float: right;
-	right: auto;
-	border-radius: 50px;
+	border-radius: 50%;
+}
+
+.userpfpText {
+	height: 1em;
+	border-radius: 50%;
 }
 
 .brandImage {

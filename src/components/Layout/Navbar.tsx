@@ -102,6 +102,40 @@ export default function NavbarComp() {
 						</NavDropdown.Item>
 					</NavDropdown>
 				</Nav>
+				<NavDropdown
+					title={
+						user === undefined ? (
+							<a
+								href='/api/auth/login'
+								className={styles.loginLink}
+							>
+								Login <FAI icon={faSignInAlt} colour='#fff' />
+							</a>
+						) : (
+							<img
+								src={user.picture}
+								width={50}
+								height={50}
+								alt={'Logged in as ' + user.name}
+								className={styles.userpfp}
+							></img>
+						)
+					}
+					alignRight
+					id='user-dropdown'
+					className='mr-sm-2'
+				>
+					<NavDropdown.Item
+						href={'https://twitch.tv/' + user.name}
+						target='_blank'
+					>
+						Logged in as {user.name}
+					</NavDropdown.Item>
+					<NavDropdown.Divider />
+					<NavDropdown.Item href='/api/auth/logout'>
+						<FAI icon={faSignOutAlt} colour='#000' /> Logout
+					</NavDropdown.Item>
+				</NavDropdown>
 			</Navbar.Collapse>
 		</Navbar>
 	);
