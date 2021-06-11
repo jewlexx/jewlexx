@@ -10,6 +10,7 @@ import {
 import {
 	faTree,
 	faSignOutAlt,
+	faSignInAlt,
 	faHome,
 	faCalendarAlt,
 } from '@fortawesome/free-solid-svg-icons';
@@ -66,7 +67,9 @@ export default function NavbarComp() {
 			</a>
 
 			{user === undefined ? (
-				<a href="/api/auth/login" className={styles.loginLink}>Login</a>
+				<a href='/api/auth/login' className={styles.loginLink}>
+					<FAI icon={faSignInAlt} colour='#fff' />
+				</a>
 			) : (
 				<img
 					src={user.picture}
