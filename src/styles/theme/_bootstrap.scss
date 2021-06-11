@@ -7,17 +7,23 @@
 	transform: rotate(180deg);
 }
 
-.nav-link {
+.nav-link:not(#user-dropdown) {
 	transition: color 0.1s ease-in-out !important;
+	transition: box-shadow 0.1s ease-in-out !important;
+	border-radius: 5px;
+}
+
+.nav-link:hover:not(#user-dropdown) {
+	box-shadow: 0 0 5px #000;
 }
 
 #user-dropdown.dropdown-toggle.nav-link::after {
-	color: white !important;
+	color: #ffffff80 !important;
 	float: right;
 }
 
 a.nav-links.nav-link.active {
-	font-weight: bolder;
+	font-weight: 700 !important;
 }
 
 @import '~bootstrap/scss/bootstrap';
