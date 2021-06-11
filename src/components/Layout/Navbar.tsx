@@ -66,7 +66,7 @@ export default function NavbarComp() {
 			</a>
 
 			{user === undefined ? (
-				<div>{null}</div>
+				<a href="/api/auth/login">Login</a>
 			) : (
 				<img
 					src={user.picture}
