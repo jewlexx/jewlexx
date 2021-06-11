@@ -56,11 +56,9 @@ export default function NavbarComp() {
 			<Navbar.Toggle aria-controls='basic-navbar-nav' />
 			<Navbar.Collapse id='basic-navbar-nav'>
 				<Nav className='mr-auto' activeKey={active}>
-					<Nav.Link href='/' className='nav-links'>
-						Home
-					</Nav.Link>
+					<Nav.Link href='/'>Home</Nav.Link>
 					<Nav.Link href='/stream/plan'>Stream Plan</Nav.Link>
-					<NavDropdown title='My Links' id='basic-nav-dropdown'>
+					<NavDropdown title='My Links' id='social-links-dropdown'>
 						<NavDropdown.Item
 							href='https://twitch.tv/jamesinaxx'
 							target='_blank'
