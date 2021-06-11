@@ -1,3 +1,13 @@
+@import url('https://use.typekit.net/vyi0eqv.css');
+@import './theme/all';
 @import '~bootstrap/scss/bootstrap';
 
-@import './theme/all';
+body {
+	margin: 0;
+}
+
+a {
+	font-family: jaf-domus, sans-serif !important;
+	font-weight: 400 !important;
+	font-style: normal !important;
+}

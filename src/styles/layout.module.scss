@@ -1,11 +1,48 @@
 .profileImage {
 	border-radius: 10em;
+	vertical-align: -0.125em;
+	pointer-events: none;
 }
 
-.navbarItem {
-	p {
-		position: absolute;
-		display: inline;
-		margin-left: 5px;
+.userpfp {
+	border-radius: 50%;
+}
+
+.userpfpText {
+	height: 1em;
+	border-radius: 50%;
+}
+
+.brandImage {
+	border-radius: 100%;
+	margin-left: 5px;
+}
+
+.navitem {
+	display: inline;
+	color: white;
+	// background-color: #000;
+	// border-radius: 25%;
+	font-size: xx-large;
+	padding: 15px;
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	margin: 10px;
+}
+
+.loginLink {
+	transition: color 0.1s ease-in-out;
+	float: right;
+	color: #ffffff80;
+	path {
+		transition: color 0.1s ease-in-out;
+		color: #ffffff80;
+	}
+	&:hover {
+		color: #fff;
+		path {
+			color: #fff;
+		}
 	}
 }
