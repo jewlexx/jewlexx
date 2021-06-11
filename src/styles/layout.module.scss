@@ -32,5 +32,17 @@
 }
 
 .loginLink {
+	transition: color 0.1s ease-in-out;
 	float: right;
+	color: #ffffff80;
+	path {
+		transition: color 0.1s ease-in-out;
+		color: #ffffff80;
+	}
+	&:hover {
+		color: #fff;
+		path {
+			color: #fff;
+		}
+	}
 }

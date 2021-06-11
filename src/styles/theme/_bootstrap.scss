@@ -7,12 +7,12 @@
 	transform: rotate(180deg);
 }
 
-.nav-link.active {
-	color: #000;
+.nav-link {
+	transition: color 0.1s ease-in-out !important;
 }
 
-.navbar {
-	height: fit-content;
+a.nav-links.nav-link.active {
+	font-weight: bolder;
 }
 
 @import '~bootstrap/scss/bootstrap';

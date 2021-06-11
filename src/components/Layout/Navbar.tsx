@@ -42,8 +42,6 @@ export default function NavbarComp() {
 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>{error.message}</div>;
 
-	console.log(active);
-
 	return (
 		<Navbar bg='dark' variant='dark' expand='lg'>
 			<Navbar.Brand href='https://twitch.tv/jamesinaxx'>
@@ -53,13 +51,14 @@ export default function NavbarComp() {
 					height={50}
 					alt='jamesinaxx pfp'
 					className={styles.brandImage}
-				/>{' '}
-				jamesinaxx.me
+				/>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls='basic-navbar-nav' />
 			<Navbar.Collapse id='basic-navbar-nav'>
-				<Nav className='mr-auto'>
-					<Nav.Link href='/'>Home</Nav.Link>
+				<Nav className='mr-auto' activeKey={active}>
+					<Nav.Link href='/' className='nav-links'>
+						Home
+					</Nav.Link>
 					<Nav.Link href='/stream/plan'>Stream Plan</Nav.Link>
 					<NavDropdown title='My Links' id='basic-nav-dropdown'>
 						<NavDropdown.Item
@@ -102,16 +101,16 @@ export default function NavbarComp() {
 						</NavDropdown.Item>
 					</NavDropdown>
 				</Nav>
-				<NavDropdown
-					title={
-						user === undefined ? (
-							<a
-								href='/api/auth/login'
-								className={styles.loginLink}
-							>
-								Login <FAI icon={faSignInAlt} colour='#fff' />
-							</a>
-						) : (
+				{user === undefined ? (
+					<Nav.Link
+						href='/api/auth/login'
+						className={styles.loginLink}
+					>
+						Login <FAI icon={faSignInAlt} colour='#fff' />
+					</Nav.Link>
+				) : (
+					<NavDropdown
+						title={
 							<img
 								src={user.picture}
 								width={50}
@@ -119,23 +118,23 @@ export default function NavbarComp() {
 								alt={'Logged in as ' + user.name}
 								className={styles.userpfp}
 							></img>
-						)
-					}
-					alignRight
-					id='user-dropdown'
-					className='mr-sm-2'
-				>
-					<NavDropdown.Item
-						href={'https://twitch.tv/' + user.name}
-						target='_blank'
+						}
+						alignRight
+						id='user-dropdown'
+						className='mr-sm-2'
 					>
-						Logged in as {user.name}
-					</NavDropdown.Item>
-					<NavDropdown.Divider />
-					<NavDropdown.Item href='/api/auth/logout'>
-						<FAI icon={faSignOutAlt} colour='#000' /> Logout
-					</NavDropdown.Item>
-				</NavDropdown>
+						<NavDropdown.Item
+							href={'https://twitch.tv/' + user.name}
+							target='_blank'
+						>
+							Logged in as {user.name}
+						</NavDropdown.Item>
+						<NavDropdown.Divider />
+						<NavDropdown.Item href='/api/auth/logout'>
+							<FAI icon={faSignOutAlt} colour='#000' /> Logout
+						</NavDropdown.Item>
+					</NavDropdown>
+				)}
 			</Navbar.Collapse>
 		</Navbar>
 	);
