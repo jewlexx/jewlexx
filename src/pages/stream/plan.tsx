@@ -5,6 +5,9 @@ import { connectToDatabase } from '../../util/mongodb';
 import dayjs from 'dayjs';
 import { useUser } from '@auth0/nextjs-auth0';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBackward } from '@fortawesome/free-solid-svg-icons';
+
 export default function Plan({ streams }: { streams: any[] }) {
 	const today = streams.filter(
 		stream => stream.date.split(' ')[0] === dayjs().format('MM-DD-YYYY')
@@ -28,9 +31,20 @@ export default function Plan({ streams }: { streams: any[] }) {
 					<p>Date is also coming soon... Maybe</p>
 				</div>
 				<div className='bottomleft'>
-					<p>jamesinaxx</p>
+					<a className='goBack' href='/'>
+						<p>{<FontAwesomeIcon icon={faBackward} />} Go Back</p>
+					</a>
 				</div>
 				<style jsx>{`
+					* {
+						user-select: none;
+					}
+
+					.goBack {
+						cursor: pointer;
+						color: #000;
+					}
+
 					body,
 					html {
 						height: 100%;
