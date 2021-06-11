@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../../styles/layout.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -6,6 +6,7 @@ import {
 	faTwitter,
 	faTwitch,
 	faYoutube,
+	faTiktok,
 } from '@fortawesome/free-brands-svg-icons';
 import {
 	faTree,
@@ -16,15 +17,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import { useUser } from '@auth0/nextjs-auth0';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-const FAI = (props: { icon: any; colour: string }) => {
-	return (
-		<FontAwesomeIcon
-			icon={props.icon}
-			className={styles.faIcon}
-			style={{ color: props.colour }}
-		/>
-	);
+const FAI = ({
+	icon,
+	colour = '#fff',
+}: {
+	icon: IconDefinition;
+	colour?: string;
+}) => {
+	return <FontAwesomeIcon icon={icon} style={{ color: colour }} />;
 };
 
 export default function NavbarComp() {
@@ -42,43 +45,114 @@ export default function NavbarComp() {
 	console.log(active);
 
 	return (
-		<div className={styles.navbar}>
-			<img
-				src='/images/profile.jpg'
-				width={50}
-				height={50}
-				className={styles.brandImage}
-			></img>
-			<a
-				className={`${styles.navitem} ${
-					active === '/' ? styles.active : ''
-				}`}
-				href='/'
-			>
-				<FAI icon={faHome} colour='#fff' />
-			</a>
-			<a
-				className={`${styles.navitem} ${
-					active === '/stream/plan' ? styles.active : ''
-				}`}
-				href='/stream/plan'
-			>
-				<FAI icon={faCalendarAlt} colour='#fff' />
-			</a>
-
-			{user === undefined ? (
-				<a href='/api/auth/login' className={styles.loginLink}>
-					<FAI icon={faSignInAlt} colour='#fff' />
-				</a>
-			) : (
+		<Navbar bg='dark' variant='dark' expand='lg'>
+			<Navbar.Brand href='https://twitch.tv/jamesinaxx'>
 				<img
-					src={user.picture}
+					src='/images/profile.jpg'
 					width={50}
 					height={50}
-					alt={'Logged in as ' + user.name}
-					className={styles.userpfp}
-				></img>
-			)}
-		</div>
+					alt='jamesinaxx pfp'
+					className={styles.brandImage}
+				/>{' '}
+				jamesinaxx.me
+			</Navbar.Brand>
+			<Navbar.Toggle aria-controls='basic-navbar-nav' />
+			<Navbar.Collapse id='basic-navbar-nav'>
+				<Nav className='mr-auto'>
+					<Nav.Link href='/'>Home</Nav.Link>
+					<Nav.Link href='/stream/plan'>Stream Plan</Nav.Link>
+					<NavDropdown title='My Links' id='basic-nav-dropdown'>
+						<NavDropdown.Item
+							href='https://twitch.tv/jamesinaxx'
+							target='_blank'
+						>
+							<FAI icon={faTwitch} colour='#6441a5' /> Twitch
+						</NavDropdown.Item>
+						<NavDropdown.Item
+							href='https://github.com/jamesinaxx'
+							target='_blank'
+						>
+							<FAI icon={faGithub} colour='#000' /> GitHub
+						</NavDropdown.Item>
+						<NavDropdown.Item
+							href='https://www.youtube.com/channel/UCwKytulnX600TzqeJAqbO6w'
+							target='_blank'
+						>
+							<FAI icon={faYoutube} colour='#c4302b ' /> YouTube
+						</NavDropdown.Item>
+						<NavDropdown.Item
+							href='https://twitter.com/jamesinaxx'
+							target='_blank'
+						>
+							<FAI icon={faTwitter} colour='#1DA1F2' /> Twitter
+						</NavDropdown.Item>
+						<NavDropdown.Item
+							href='https://www.tiktok.com/@jamesinaxx?lang=en'
+							target='_blank'
+						>
+							<FAI icon={faTiktok} colour='#69c9d0' /> TikTok
+						</NavDropdown.Item>
+						<NavDropdown.Divider />
+						<NavDropdown.Item
+							href='https://linktr.ee/jamesinaxx'
+							target='_blank'
+						>
+							<FAI icon={faTree} colour='rgb(0, 200, 0)' />{' '}
+							Linktree
+						</NavDropdown.Item>
+					</NavDropdown>
+				</Nav>
+			</Navbar.Collapse>
+		</Navbar>
+	);
+
+	const ugh = (
+		<nav className={styles.navbar}>
+			<ul>
+				<li>
+					<img
+						src='/images/profile.jpg'
+						width={50}
+						height={50}
+						className={styles.brandImage}
+					></img>
+				</li>
+				<li>
+					<a
+						className={`${styles.navitem} ${
+							active === '/' ? styles.active : ''
+						}`}
+						href='/'
+					>
+						Home
+					</a>
+				</li>
+				<li>
+					<a
+						className={`${styles.navitem} ${
+							active === '/stream/plan' ? styles.active : ''
+						}`}
+						href='/stream/plan'
+					>
+						Stream Plan
+					</a>
+				</li>
+				<li>
+					{user === undefined ? (
+						<a href='/api/auth/login' className={styles.loginLink}>
+							<FAI icon={faSignInAlt} colour='#fff' />
+						</a>
+					) : (
+						<img
+							src={user.picture}
+							width={50}
+							height={50}
+							alt={'Logged in as ' + user.name}
+							className={styles.userpfp}
+						></img>
+					)}
+				</li>
+			</ul>
+		</nav>
 	);
 }

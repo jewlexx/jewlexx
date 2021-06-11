@@ -19,9 +19,15 @@ export default function Main({ isConnected }) {
 }
 
 export async function getServerSideProps(context) {
-	const { client } = await connectToDatabase();
+	let isConnected;
+	try {
+		const { client } = await connectToDatabase();
 
-	const isConnected = client.isConnected();
+		isConnected = client.isConnected();
+	} catch (error) {
+		isConnected = false;
+		console.error(error);
+	}
 
 	return {
 		props: { isConnected },

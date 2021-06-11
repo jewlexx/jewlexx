@@ -10,51 +10,24 @@
 	border-radius: 50px;
 }
 
-.navbar {
-	background-color: #333;
+.brandImage {
+	border-radius: 100%;
+	margin-left: 5px;
+}
+
+.navitem {
+	display: inline;
+	color: white;
+	// background-color: #000;
+	// border-radius: 25%;
+	font-size: xx-large;
 	padding: 15px;
-	overflow: hidden;
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	margin: 10px;
+}
 
-	.brandImage {
-		margin-right: 8px;
-		border-radius: 5px;
-		float: left;
-	}
-
-	.navitem,
-	a {
-		path {
-			transition: color 0.1s ease-in-out;
-		}
-		transition: background 0.1s ease-in-out;
-		margin-left: 10px;
-		border-radius: 100%;
-		float: left;
-		color: #000;
-		background-color: rgba(201, 195, 195, 0.5);
-		text-align: center;
-		padding: 14px 8px;
-		text-decoration: none;
-		font-size: 17px;
-		text-align: center;
-		line-height: 25px;
-		width: 50px;
-		height: 50px;
-		&:hover,
-		&.active:hover {
-			background-color: #eeeded;
-
-			path {
-				color: #000;
-			}
-		}
-
-		&.active {
-			background-color: rgba(0, 160, 160, 0.5);
-		}
-	}
-
-	.loginLink {
-		float: right;
-	}
+.loginLink {
+	float: right;
 }
