@@ -5,8 +5,7 @@ import { connectToDatabase } from '../../util/mongodb';
 import dayjs from 'dayjs';
 import { useUser } from '@auth0/nextjs-auth0';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward } from '@fortawesome/free-solid-svg-icons';
+import ComingSoon from '../../components/ComingSoon';
 
 export default function Plan({ streams }: { streams: any[] }) {
 	const today = streams.filter(
@@ -22,66 +21,7 @@ export default function Plan({ streams }: { streams: any[] }) {
 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>{error.message}</div>;
 
-	if ((user || { name: null }).name !== 'jamesinaxx')
-		return (
-			<div className='bgimg'>
-				<div className='middle'>
-					<h1>COMING SOON</h1>
-					<hr />
-					<p>Date is also coming soon... Maybe</p>
-				</div>
-				<div className='bottomleft'>
-					<a className='goBack' href='/'>
-						<p>{<FontAwesomeIcon icon={faBackward} />} Go Back</p>
-					</a>
-				</div>
-				<style jsx>{`
-					* {
-						user-select: none;
-					}
-
-					.goBack {
-						cursor: pointer;
-						color: #000;
-					}
-
-					body,
-					html {
-						height: 100%;
-						background: #000;
-					}
-
-					/* Position text in the top-left corner */
-					.topleft {
-						position: absolute;
-						top: 0;
-						left: 16px;
-					}
-
-					/* Position text in the bottom-left corner */
-					.bottomleft {
-						position: absolute;
-						bottom: 0;
-						left: 16px;
-					}
-
-					/* Position text in the middle */
-					.middle {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						transform: translate(-50%, -50%);
-						text-align: center;
-					}
-
-					/* Style the <hr> element */
-					hr {
-						margin: auto;
-						width: 40%;
-					}
-				`}</style>
-			</div>
-		);
+	if ((user || { name: null }).name !== 'jamesinaxx') return <ComingSoon />;
 
 	return (
 		<Layout>
