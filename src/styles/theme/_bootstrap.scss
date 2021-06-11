@@ -11,6 +11,11 @@
 	transition: color 0.1s ease-in-out !important;
 }
 
+#user-dropdown.dropdown-toggle.nav-link::after {
+	color: white !important;
+	float: right;
+}
+
 a.nav-links.nav-link.active {
 	font-weight: bolder;
 }
