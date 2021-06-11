@@ -65,13 +65,17 @@ export default function NavbarComp() {
 				<FAI icon={faCalendarAlt} colour='#fff' />
 			</a>
 
-			<img
-				src={user.picture}
-				width={50}
-				height={50}
-				alt={'Logged in as ' + user.name}
-				className={styles.userpfp}
-			></img>
+			{user === undefined ? (
+				<div>{null}</div>
+			) : (
+				<img
+					src={user.picture}
+					width={50}
+					height={50}
+					alt={'Logged in as ' + user.name}
+					className={styles.userpfp}
+				></img>
+			)}
 		</div>
 	);
 }
