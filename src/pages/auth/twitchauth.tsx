@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 
-export default function TwitchAuth() {
-    let urlParams: URLSearchParams = null;
+export default function TwitchAuth({clientId}) {
+	let urlParams: URLSearchParams = null;
 
 	useEffect(() => {
 		const queryString = window.location.hash.replace('#', '?');
 		urlParams = new URLSearchParams(queryString);
-		const client_id = process.env.TWITCHCLIENT;
 		const redirect_uri = 'https://jamesinaxx.me/auth/twitchauth';
 
-		authUrl.searchParams.append('client_id', client_id);
+		authUrl.searchParams.append('client_id', clientId);
 		authUrl.searchParams.append('redirect_uri', redirect_uri);
 		authUrl.searchParams.append('response_type', 'token');
 		authUrl.searchParams.append('scope', 'user:read:follows');
@@ -30,7 +29,7 @@ export default function TwitchAuth() {
 			{!(urlParams || { has: () => null }).has('access_token') ? (
 				<p>
 					Click here to{' '}
-					<button onClick={() => window.open(authUrl.href, "_self")}>
+					<button onClick={() => window.open(authUrl.href, '_self')}>
 						Login with Twitch{' '}
 						<i>
 							<TwitchIcon />
@@ -91,4 +90,12 @@ export default function TwitchAuth() {
 			</div>
 		</>
 	);
+}
+
+export async function getStaticProps() {
+	return {
+		props: {
+			clientId: process.env.TWITCHCLIENT,
+		},
+	};
 }
