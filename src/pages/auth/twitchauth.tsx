@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-export default function TwitchAuth({clientId}) {
+export default function TwitchAuth({clientId, redirectUrl}) {
 	let urlParams: URLSearchParams = null;
 
 	useEffect(() => {
 		const queryString = window.location.hash.replace('#', '?');
 		urlParams = new URLSearchParams(queryString);
-		const redirect_uri = 'https://3000-cyan-horse-v7ot8jl4.ws-us09.gitpod.io//auth/twitchauth';
+		const redirect_uri = redirectUrl + '/auth/twitchauth';
 
 		authUrl.searchParams.append('client_id', clientId);
 		authUrl.searchParams.append('redirect_uri', redirect_uri);
@@ -96,6 +96,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			clientId: process.env.TWITCHCLIENT,
+            redirectUrl: process.env.REDICRECT_URL
 		},
 	};
 }
