@@ -1,4 +1,3 @@
-import { faChromecast } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState, Component } from 'react';
 
 export default class TwitchAuth extends Component<
@@ -13,6 +12,15 @@ export default class TwitchAuth extends Component<
 			authUrl: null,
 			chromium: true,
 		};
+	}
+
+	wait(time: number) {
+		const timeNow = new Date().getTime();
+		let timePast = timeNow;
+		time = timeNow + time;
+		while (timePast >= time) {
+			return;
+		}
 	}
 
 	componentDidMount() {
@@ -55,13 +63,6 @@ export default class TwitchAuth extends Component<
 			></img>
 		);
 
-		if (this.state.urlParams.access_token === undefined) {
-			window.chrome.runtime.sendMessage({
-				method: 'setWhoLiveToken',
-				token: this.state.urlParams.access_token,
-			});
-		}
-
 		const Button = () => (
 			<div className='twitchLogin'>
 				{this.state.urlParams.access_token === undefined ? (
@@ -79,10 +80,40 @@ export default class TwitchAuth extends Component<
 						</button>
 					</p>
 				) : (
-					<p>
-						Thank you for authorizing with Twitch! Open the
-						extension on this page to begin using it!
-					</p>
+					<>
+						<p>
+							Thank you for authorizing with Twitch! Copy and
+							paste{' '}
+							<i
+								id='twitchToken'
+								onClick={() => {
+									console.log('Yes');
+									navigator.clipboard.writeText(
+										Buffer.from(
+											this.state.urlParams.access_token
+										).toString('base64')
+									);
+
+									document.getElementById(
+										'copied'
+									).style.visibility = 'visible';
+									setTimeout(() => {
+										document.getElementById(
+											'copied'
+										).style.visibility = 'hidden';
+									}, 2000);
+								}}
+							>
+								{Buffer.from(
+									this.state.urlParams.access_token
+								).toString('base64')}
+							</i>{' '}
+							into the <i>token</i> box to complete authorization
+						</p>
+						<small style={{ visibility: 'hidden' }} id='copied'>
+							Copied to clipboard
+						</small>
+					</>
 				)}
 			</div>
 		);
