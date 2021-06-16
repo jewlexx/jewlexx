@@ -1,4 +1,4 @@
-import { useEffect, useState, Component } from 'react';
+import { Component } from 'react';
 
 export default class TwitchAuth extends Component<
 	{ clientId: string; redirectUrl: string },
@@ -86,6 +86,7 @@ export default class TwitchAuth extends Component<
 							paste{' '}
 							<i
 								id='twitchToken'
+								className='codeText'
 								onClick={() => {
 									console.log('Yes');
 									navigator.clipboard.writeText(
@@ -96,11 +97,11 @@ export default class TwitchAuth extends Component<
 
 									document.getElementById(
 										'copied'
-									).style.visibility = 'visible';
+									).style.opacity = '100';
 									setTimeout(() => {
 										document.getElementById(
 											'copied'
-										).style.visibility = 'hidden';
+										).style.opacity = '0';
 									}, 2000);
 								}}
 							>
@@ -110,7 +111,7 @@ export default class TwitchAuth extends Component<
 							</i>{' '}
 							into the <i>token</i> box to complete authorization
 						</p>
-						<small style={{ visibility: 'hidden' }} id='copied'>
+						<small style={{ opacity: '0' }} id='copied'>
 							Copied to clipboard
 						</small>
 					</>

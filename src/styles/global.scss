@@ -11,3 +11,15 @@ a {
 	font-weight: 400 !important;
 	font-style: normal !important;
 }
+
+.codeText {
+	background-color: gray;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 25px;
+}
+
+#copied {
+	transition: opacity 100ms ease-in-out;
+}
