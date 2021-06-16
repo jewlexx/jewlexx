@@ -2,13 +2,13 @@ import { useEffect, useState, Component } from 'react';
 
 export default class TwitchAuth extends Component<
 	{ clientId: string; redirectUrl: string },
-	{ urlParams: any, authUrl: URL }
+	{ urlParams: any; authUrl: URL }
 > {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			urlParams: null,
+			urlParams: {},
 			authUrl: null,
 		};
 	}
@@ -24,7 +24,7 @@ export default class TwitchAuth extends Component<
 			return res;
 		}, {});
 
-		this.setState({urlParams: result});
+		this.setState({ urlParams: result });
 
 		const redirect_uri = this.props.redirectUrl + '/auth/twitchauth';
 
@@ -33,25 +33,27 @@ export default class TwitchAuth extends Component<
 		authUrl.searchParams.append('response_type', 'token');
 		authUrl.searchParams.append('scope', 'user:read:follows');
 
-		this.setState({authUrl})
+		this.setState({ authUrl });
 	}
 
 	render() {
 		const TwitchIcon = () => (
 			<img
 				src='/images/TwitchGlitchPurple.svg'
-				width='24px'
-				height='24px'
+				width='1em'
+				height='1em'
 			></img>
 		);
-
+		
 		const Button = () => (
 			<div className='twitchLogin'>
-				{!this.state.urlParams ? (
+				{this.state.urlParams.access_token === undefined ? (
 					<p>
 						Click here to{' '}
 						<button
-							onClick={() => window.open(this.state.authUrl.href, '_self')}
+							onClick={() =>
+								window.open(this.state.authUrl.href, '_self')
+							}
 						>
 							Login with Twitch{' '}
 							<i>
