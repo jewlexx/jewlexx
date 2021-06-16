@@ -6,7 +6,7 @@ export default function TwitchAuth({clientId}) {
 	useEffect(() => {
 		const queryString = window.location.hash.replace('#', '?');
 		urlParams = new URLSearchParams(queryString);
-		const redirect_uri = 'https://jamesinaxx.me/auth/twitchauth';
+		const redirect_uri = 'https://3000-cyan-horse-v7ot8jl4.ws-us09.gitpod.io//auth/twitchauth';
 
 		authUrl.searchParams.append('client_id', clientId);
 		authUrl.searchParams.append('redirect_uri', redirect_uri);
