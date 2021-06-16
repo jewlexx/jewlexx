@@ -1,4 +1,4 @@
-declare const window: any;
+import { faChromecast } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState, Component } from 'react';
 
 export default class TwitchAuth extends Component<
@@ -11,7 +11,7 @@ export default class TwitchAuth extends Component<
 		this.state = {
 			urlParams: {},
 			authUrl: null,
-			chromium: true
+			chromium: true,
 		};
 	}
 
@@ -39,7 +39,13 @@ export default class TwitchAuth extends Component<
 	}
 
 	render() {
-		if (!this.state.chromium) return(<div>You cannot use this chromium extension without a chromium browser... so why are you here?</div>)
+		if (!this.state.chromium)
+			return (
+				<div>
+					You cannot use this chromium extension without a chromium
+					browser... so why are you here?
+				</div>
+			);
 
 		const TwitchIcon = () => (
 			<img
@@ -48,7 +54,14 @@ export default class TwitchAuth extends Component<
 				height='1em'
 			></img>
 		);
-		
+
+		if (this.state.urlParams.access_token === undefined) {
+			window.chrome.runtime.sendMessage({
+				method: 'setWhoLiveToken',
+				token: this.state.urlParams.access_token,
+			});
+		}
+
 		const Button = () => (
 			<div className='twitchLogin'>
 				{this.state.urlParams.access_token === undefined ? (
