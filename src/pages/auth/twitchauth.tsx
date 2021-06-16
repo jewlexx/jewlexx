@@ -1,3 +1,4 @@
+declare const window: any;
 import { useEffect, useState, Component } from 'react';
 
 export default class TwitchAuth extends Component<
