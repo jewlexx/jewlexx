@@ -2,7 +2,7 @@ import { useEffect, useState, Component } from 'react';
 
 export default class TwitchAuth extends Component<
 	{ clientId: string; redirectUrl: string },
-	{ urlParams: any; authUrl: URL }
+	{ urlParams: any; authUrl: URL; chromium: boolean }
 > {
 	constructor(props) {
 		super(props);
@@ -10,6 +10,7 @@ export default class TwitchAuth extends Component<
 		this.state = {
 			urlParams: {},
 			authUrl: null,
+			chromium: true
 		};
 	}
 
@@ -33,10 +34,12 @@ export default class TwitchAuth extends Component<
 		authUrl.searchParams.append('response_type', 'token');
 		authUrl.searchParams.append('scope', 'user:read:follows');
 
-		this.setState({ authUrl });
+		this.setState({ authUrl, chromium: !!window.chrome });
 	}
 
 	render() {
+		if (!this.state.chromium) return(<div>You cannot use this chromium extension without a chromium browser... so why are you here?</div>)
+
 		const TwitchIcon = () => (
 			<img
 				src='/images/TwitchGlitchPurple.svg'
