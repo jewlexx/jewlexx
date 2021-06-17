@@ -55,14 +55,6 @@ export default class TwitchAuth extends Component<
 				</div>
 			);
 
-		const TwitchIcon = () => (
-			<img
-				src='/images/TwitchGlitchPurple.svg'
-				width='1em'
-				height='1em'
-			></img>
-		);
-
 		const Button = () => (
 			<div className='twitchLogin'>
 				{this.state.urlParams.access_token === undefined ? (
@@ -73,10 +65,13 @@ export default class TwitchAuth extends Component<
 								window.open(this.state.authUrl.href, '_self')
 							}
 						>
-							Login with Twitch{' '}
-							<i>
-								<TwitchIcon />
+							<i className='twitchAuth'>
+								<img
+									src='/images/TwitchGlitchPurple.svg'
+									height='25px'
+								></img>
 							</i>
+							Authorize
 						</button>
 					</p>
 				) : (
@@ -141,20 +136,29 @@ export default class TwitchAuth extends Component<
 
 					button {
 						font-family: 'Roboto Mono', monospace;
+						decoration: none;
+						border: none;
 						border-style: solid;
 						font-size: xx-large;
 						border-radius: 5px;
-						border-color: #9146ff;
-						background-color: #f0f0ff;
+						background-color: #7636d6;
+						display: inline-grid;
+						grid-template-columns: 25px auto;
+						grid-template-rows: auto;
+						transition: all 100ms ease-in-out;
 					}
 
 					button:hover {
-						background-color: #383f5a;
+						background-color: #4b169c;
+						color: white;
+					}
+
+					button::active {
+						background-color: #4b169c;
+						color: white;
 					}
 				`}</style>
 				<div>
-					This is in pre-pre-pre-pre-pre production. If you are not
-					jamesinaxx, don't use this...
 					<Button />
 				</div>
 			</>
