@@ -44,6 +44,8 @@ export default class TwitchAuth extends Component<
 		authUrl.searchParams.append('scope', 'user:read:follows');
 
 		this.setState({ authUrl, chromium: !!window.chrome });
+
+		window.location.hash = '';
 	}
 
 	render() {
@@ -59,7 +61,6 @@ export default class TwitchAuth extends Component<
 			<div className='twitchLogin'>
 				{this.state.urlParams.access_token === undefined ? (
 					<p>
-						Click here to{' '}
 						<button
 							onClick={() =>
 								window.open(this.state.authUrl.href, '_self')
@@ -151,6 +152,14 @@ export default class TwitchAuth extends Component<
 					button:hover {
 						background-color: #4b169c;
 						color: white;
+					}
+
+					p {
+						user-select: none;
+					}
+
+					#twitchToken.codeText {
+						user-select: all;
 					}
 
 					button::active {
