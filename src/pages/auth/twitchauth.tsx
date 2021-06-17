@@ -119,7 +119,6 @@ export default class TwitchAuth extends Component<
 			<>
 				<style jsx global>{`
 					body {
-						font-family: 'Akaya Telivigala', cursive;
 						background: #23272a;
 						color: #fff;
 						display: inline-block;
