@@ -90,9 +90,7 @@ export default class TwitchAuth extends Component<
 								onClick={() => {
 									console.log('Yes');
 									navigator.clipboard.writeText(
-										Buffer.from(
-											this.state.urlParams.access_token
-										).toString('base64')
+										this.state.urlParams.access_token
 									);
 
 									document.getElementById(
@@ -105,9 +103,7 @@ export default class TwitchAuth extends Component<
 									}, 2000);
 								}}
 							>
-								{Buffer.from(
-									this.state.urlParams.access_token
-								).toString('base64')}
+								{this.state.urlParams.access_token}
 							</i>{' '}
 							into the <i>token</i> box to complete authorization
 						</p>
