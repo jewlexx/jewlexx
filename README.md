@@ -1,8 +1,8 @@
-# Hi!
-
-My name is James, I am a learning developer, currently "majoring" in Javascript/Typescript
+# Hi 👋
 
 ## Stats
 
-![](https://github-readme-stats.vercel.app/api?username=jamesinaxx&count_private=true&show_icons=true&theme=onedark)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=jamesinaxx&theme=onedark&layout=compact&langs_count=10)
+<div style="display: flex;">
+<img src="https://github-readme-stats.vercel.app/api?username=jamesinaxx&count_private=true&show_icons=true&theme=onedark" style="max-height: 200px">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jamesinaxx&theme=onedark&layout=compact&langs_count=10" style="max-height: 195px; margin-left: 10px;">
+</div>
