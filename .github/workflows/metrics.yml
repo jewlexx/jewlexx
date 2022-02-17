@@ -23,7 +23,7 @@ jobs:
 
           # Options
           user: jewlexx
-          template: markdown
+          template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Australia/Sydney
           plugin_languages: yes
