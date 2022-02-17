@@ -2,7 +2,7 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{ cron: '0 * * * *' }]
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
 jobs:
@@ -23,7 +23,7 @@ jobs:
 
           # Options
           user: jewlexx
-          template: terminal
+          template: markdown
           base: header, activity, community, repositories, metadata
           config_timezone: Australia/Sydney
           plugin_languages: yes
@@ -39,3 +39,9 @@ jobs:
           plugin_lines: yes
           plugin_projects: yes
           plugin_projects_limit: 4
+          plugin_wakatime: yes
+          plugin_wakatime_days: 7
+          plugin_wakatime_limit: 5
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          plugin_wakatime_url: https://wakatime.com
+          plugin_wakatime_user: current
