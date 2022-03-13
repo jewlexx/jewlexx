@@ -1,6 +1,4 @@
-<div align="center">
-<h1>Hello 👋</h1>
-</div>
+# Hello 👋
 
 <div align="left">
 <a href="https://app.daily.dev/jewlexx"><img src="https://api.daily.dev/devcards/7a2c26db4b964b589bf4208d8d7a32e0.png?r=863"
