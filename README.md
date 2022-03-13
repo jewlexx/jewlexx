@@ -1,9 +1,14 @@
 # Hello 👋
 
 <div align="left">
-<a href="https://app.daily.dev/jewlexx"><img src="https://api.daily.dev/devcards/7a2c26db4b964b589bf4208d8d7a32e0.png?r=863"
+  <a href="https://app.daily.dev/jewlexx">
+    <img
+      src="https://api.daily.dev/devcards/7a2c26db4b964b589bf4208d8d7a32e0.png?r=863"
       width="256"
-      align="right" alt="Juliette Cordor's Dev Card"/></a>
+      align="right"
+      alt="Juliette Cordor's Dev Card"
+    />
+  </a>
 </div>
 
 [![Twitter](https://img.shields.io/twitter/follow/jewelexx?color=blue&label=Twitter&logo=twitter&style=for-the-badge)](https://twitter.com/jewelexx)
