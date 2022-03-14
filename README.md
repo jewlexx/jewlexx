@@ -23,4 +23,4 @@
 - Linus Torvalds is God
 
 ![Metrics](github-metrics.svg)
-![Snek](https://raw.githubusercontent.com/jewlexx/jewlexx/output/github-contribution-grid-snake.svg)
+![Snek](https://raw.githubusercontent.com/jewlexx/jewlexx/snake/github-contribution-grid-snake.svg)
