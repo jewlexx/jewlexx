@@ -3,8 +3,6 @@ name: Update Readme Files
 on:
   schedule:
     - cron: '0 7 * * *'
-  push:
-    branches: ['main']
 
   workflow_dispatch:
 
