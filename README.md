@@ -3,7 +3,7 @@
 <div align="left">
   <a href="https://app.daily.dev/jewlexx">
     <img
-      src="https://api.daily.dev/devcards/7a2c26db4b964b589bf4208d8d7a32e0.png?r=863"
+      src="https://api.daily.dev/devcards/7a2c26db4b964b589bf4208d8d7a32e0.png?r=tdd"
       width="256"
       align="right"
       alt="Juliette Cordor's Dev Card"
