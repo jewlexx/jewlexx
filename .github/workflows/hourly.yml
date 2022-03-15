@@ -1,4 +1,4 @@
-name: Hourly
+name: Update Readme Files [Hourly]
 
 on:
   schedule:
