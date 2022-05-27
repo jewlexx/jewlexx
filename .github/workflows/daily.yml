@@ -6,6 +6,8 @@ on:
 
   workflow_dispatch:
 
+permissions: write-all
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
