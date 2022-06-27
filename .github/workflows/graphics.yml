@@ -32,6 +32,7 @@ jobs:
 
           # Options
           filename: dist/github-metrics.svg
+          commiter_branch: output
           user: jewlexx
           template: classic
           base: activity, community, repositories
