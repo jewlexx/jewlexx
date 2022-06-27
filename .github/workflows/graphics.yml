@@ -22,6 +22,7 @@ jobs:
         id: dailydotdev-card
         with:
           commit_filename: dist/devcard.svg
+          commit_branch: output
           devcard_id: ${{ secrets.DEVCARD_ID }}
 
       - uses: lowlighter/metrics@latest
