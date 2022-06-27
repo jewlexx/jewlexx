@@ -12,13 +12,13 @@ jobs:
   readme-graphics:
     runs-on: ubuntu-latest
     steps:
-      - uses: Platane/snk@master
+      - uses: Platane/snk@v2.0.0
         id: snake-gif
         with:
           github_user_name: jewlexx
           svg_out_path: dist/github-contribution-grid-snake.svg
 
-      - uses: dailydotdev/action-devcard@latest
+      - uses: dailydotdev/action-devcard@2.0.6
         id: dailydotdev-card
         with:
           commit_filename: dist/devcard.svg
@@ -47,7 +47,7 @@ jobs:
           plugin_languages_threshold: 0%
           plugin_lines: yes
 
-      - uses: crazy-max/ghaction-github-pages@latest
+      - uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
           target_branch: output
           build_dir: dist
