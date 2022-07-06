@@ -19,8 +19,7 @@
 
 ## My name is Juliette
 
-- I have a caffeine addiction
-- Linus Torvalds is God
+- I Use Rust :)
 
 ![Metrics](https://raw.githubusercontent.com/jewlexx/jewlexx/metrics/github-metrics.svg)
 ![Snek](https://raw.githubusercontent.com/jewlexx/jewlexx/snake/github-contribution-grid-snake.svg)
