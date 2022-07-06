@@ -21,5 +21,5 @@
 
 - I Use Rust :)
 
-![Metrics](https://raw.githubusercontent.com/jewlexx/jewlexx/metrics/github-metrics.svg)
+![Metrics](https://raw.githubusercontent.com/jewlexx/jewlexx/metrics/dist/github-metrics.svg)
 ![Snek](https://raw.githubusercontent.com/jewlexx/jewlexx/snake/github-contribution-grid-snake.svg)
