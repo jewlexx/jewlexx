@@ -18,6 +18,14 @@ jobs:
           github_user_name: jewlexx
           outputs: dist/github-contribution-grid-snake.svg
 
+      - uses: crazy-max/ghaction-github-pages@v3.0.0
+        id: publish-snake-gif
+        with:
+          target_branch: snake
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: dailydotdev/action-devcard@2.0.6
         id: dailydotdev-card
         with:
@@ -48,10 +56,3 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
           plugin_lines: yes
-
-      - uses: crazy-max/ghaction-github-pages@v3.0.0
-        with:
-          target_branch: snake
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
