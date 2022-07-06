@@ -32,7 +32,7 @@ jobs:
 
           # Options
           filename: dist/github-metrics.svg
-          commiter_branch: output
+          commiter_branch: metrics
           user: jewlexx
           template: classic
           base: activity, community, repositories
@@ -51,7 +51,7 @@ jobs:
 
       - uses: crazy-max/ghaction-github-pages@v3.0.0
         with:
-          target_branch: output
+          target_branch: snake
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
