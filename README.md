@@ -3,7 +3,7 @@
 <div align="left">
   <a href="https://app.daily.dev/jewlexx">
     <img
-      src="devcard.svg"
+      src="https://github.com/jewlexx/jewlexx/blob/output/devcard.svg"
       width="256"
       align="right"
       alt="Juliette Cordor's Dev Card"
@@ -22,5 +22,5 @@
 - I have a caffeine addiction
 - Linus Torvalds is God
 
-![Metrics](github-metrics.svg)
+![Metrics](https://raw.githubusercontent.com/jewlexx/jewlexx/metrics/github-metrics.svg)
 ![Snek](https://raw.githubusercontent.com/jewlexx/jewlexx/snake/github-contribution-grid-snake.svg)
