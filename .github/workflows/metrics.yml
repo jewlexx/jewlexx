@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           # Options
-          filename: dist/github-metrics.svg
+          filename: github-metrics.svg
           committer_branch: metrics
           user: jewlexx
           template: classic
