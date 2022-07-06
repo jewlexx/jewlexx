@@ -1,5 +1,5 @@
 # Metris is slow relative to everything else so I put in in separate workflow that runs once per day
-name: Update Readme Graphics
+name: Update Metrics Graphics
 
 on:
   schedule:
