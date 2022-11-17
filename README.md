@@ -19,7 +19,7 @@
 
 ## My name is Juliette
 
-- I Use Rust :)
+I write Rust programs to fix my problems :)
 
 ![Metrics](https://raw.githubusercontent.com/jewlexx/jewlexx/metrics/github-metrics.svg)
 ![Snek](https://raw.githubusercontent.com/jewlexx/jewlexx/snake/github-contribution-grid-snake.svg)
