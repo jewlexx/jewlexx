@@ -18,7 +18,7 @@ jobs:
           github_user_name: jewlexx
           outputs: dist/github-contribution-grid-snake.svg
 
-      - uses: crazy-max/ghaction-github-pages@v3.0.0
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
         id: publish-snake-gif
         with:
           target_branch: snake
