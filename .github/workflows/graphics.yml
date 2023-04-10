@@ -25,10 +25,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: dailydotdev/action-devcard@2.0.6
-        id: dailydotdev-card
-        with:
-          commit_filename: devcard.svg
-          commit_branch: output
-          devcard_id: ${{ secrets.DEVCARD_ID }}
