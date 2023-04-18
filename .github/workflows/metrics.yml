@@ -29,6 +29,7 @@ jobs:
           committer_branch: metrics
           user: jewlexx
           config_timezone: Australia/Sydney
+          config_order: base.header, introduction, base.activity+community, base.repositories, code, languages
           template: classic
           base: header, repositories, activity, community
           plugin_code: yes
