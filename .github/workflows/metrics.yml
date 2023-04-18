@@ -31,7 +31,6 @@ jobs:
           config_timezone: Australia/Sydney
           template: classic
           base: header, repositories, activity, community
-          base_indepth: yes
           plugin_code: yes
           plugin_code_days: 3
           plugin_code_lines: 12
