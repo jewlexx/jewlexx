@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="810" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="743" class="">
     <defs>
         <style/>
     </defs>
@@ -43,7 +43,7 @@
                                     <rect class="day" x="150" y="0" width="11" height="11" fill="#30a14e" rx="2" ry="2"/>
                                     <rect class="day" x="165" y="0" width="11" height="11" fill="#40c463" rx="2" ry="2"/>
                                     <rect class="day" x="180" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
-                                    <rect class="day" x="195" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
+                                    <rect class="day" x="195" y="0" width="11" height="11" fill="#30a14e" rx="2" ry="2"/>
                                 </g>
                             </svg>
                         </div>
@@ -69,7 +69,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            10124 Commits
+                            10148 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -219,14 +219,14 @@
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="244.52248947338063" height="8" fill="#dea584"/>
-                    <rect mask="url(#languages-bar)" x="244.52248947338063" y="0" width="78.50397800465286" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="323.0264674780335" y="0" width="71.02666743573475" height="8" fill="#178600"/>
-                    <rect mask="url(#languages-bar)" x="394.05313491376825" y="0" width="28.475760896733384" height="8" fill="#222c37"/>
-                    <rect mask="url(#languages-bar)" x="422.52889581050164" y="0" width="11.504643248543577" height="8" fill="#b07219"/>
-                    <rect mask="url(#languages-bar)" x="434.0335390590452" y="0" width="9.526354040491434" height="8" fill="#355570"/>
-                    <rect mask="url(#languages-bar)" x="443.5598930995367" y="0" width="8.639449347253466" height="8" fill="#555555"/>
-                    <rect mask="url(#languages-bar)" x="452.1993424467901" y="0" width="7.8006575532098985" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="244.4570160350323" height="8" fill="#dea584"/>
+                    <rect mask="url(#languages-bar)" x="244.4570160350323" y="0" width="79.14545178845214" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="323.6024678234844" y="0" width="70.72798648456155" height="8" fill="#178600"/>
+                    <rect mask="url(#languages-bar)" x="394.33045430804594" y="0" width="28.35601478365955" height="8" fill="#222c37"/>
+                    <rect mask="url(#languages-bar)" x="422.6864690917055" y="0" width="11.45626398604344" height="8" fill="#b07219"/>
+                    <rect mask="url(#languages-bar)" x="434.1427330777489" y="0" width="9.486293868886156" height="8" fill="#355570"/>
+                    <rect mask="url(#languages-bar)" x="443.62902694663507" y="0" width="8.603118782385206" height="8" fill="#555555"/>
+                    <rect mask="url(#languages-bar)" x="452.2321457290203" y="0" width="7.767854270979639" height="8" fill="#f1e05a"/>
                 </svg>
                 <div class="field center horizontal-wrap fill-width">
                     <div class="field center no-wrap language">
@@ -285,12 +285,12 @@
                         <path fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"/>
                     </svg>
                     Recent coding habits
-                    <small class="h-details">(computed from last 118 commits)</small>
+                    <small class="h-details">(computed from last 81 commits)</small>
                 </h2>
                 <div class="row">
                     <ul class="facts">
                         <li>Uses spaces for indentation</li>
-                        <li>Has approximately 26.5 characters per line of code written</li>
+                        <li>Has approximately 26.1 characters per line of code written</li>
                         <li>Mostly pushes code around 14:00</li>
                         <li>Mostly active on Thursday</li>
                     </ul>
@@ -310,7 +310,7 @@
                                 <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
                             </svg>
                             From
-                            <span class="blue space">jewlexx/fauxchat</span>
+                            <span class="blue space">jewlexx/copt</span>
                         </div>
                     </section>
                     <section class="largeable-column-fields">
@@ -318,7 +318,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"/>
                             </svg>
-                            On 6 May 2023, 23:50:24
+                            On 28 Apr 2023, 13:44:45
                         </div>
                     </section>
                 </div>
@@ -328,16 +328,16 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            added tauri app
+                            added files
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/>
                             </svg>
-                            <span class="code">f9f585ce</span>
-                            <span class="code">app/src/main.tsx</span>
+                            <span class="code">05993a7d</span>
+                            <span class="code">library.h</span>
                             <span class="code">
-                                <span class="snippet additions">++10</span>
+                                <span class="snippet additions">++6</span>
                                 <span class="snippet deletions">--0</span>
                             </span>
                         </div>
@@ -346,8 +346,7 @@
                 <div class="row">
                     <section class="snippet">
                         <div class="body markdown">
-                            <code class="language-diff" xml:space="preserve"><span class="token coord">@@ -0,0 +1,10 @@</span><br /><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">import React from "react";<br /></span><span class="token prefix inserted">+</span><span class="token line">import ReactDOM from "react-dom/client";<br /></span><span class="token prefix inserted">+</span><span class="token line">import App from "./App";<br /></span><span class="token prefix inserted">+</span><span class="token line">import "./styles.css";<br /></span><span class="token prefix inserted">+</span><span class="token line"><br /></span><span class="token prefix inserted">+</span><span class="token line">ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<br /></span><span class="token prefix inserted">+</span><span class="token line">&lt;React.StrictMode&gt;<br /></span><span class="token prefix inserted">+</span><span class="token line">  &lt;App /&gt;<br /></span><span class="token prefix inserted">+</span><span class="token line">&lt;/React.StrictMode&gt;<br /></span><span class="token prefix inserted">+</span><span class="token line">);
-</span></span></code>
+                            <code class="language-diff" xml:space="preserve"><span class="token coord">@@ -0,0 +1,6 @@</span><br /><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">#ifndef COPT_LIBRARY_H<br /></span><span class="token prefix inserted">+</span><span class="token line">#define COPT_LIBRARY_H<br /></span><span class="token prefix inserted">+</span><span class="token line"><br /></span><span class="token prefix inserted">+</span><span class="token line">void hello(void);<br /></span><span class="token prefix inserted">+</span><span class="token line"><br /></span><span class="token prefix inserted">+</span><span class="token line">#endif //COPT_LIBRARY_H</span></span></code>
                         </div>
                     </section>
                 </div>
