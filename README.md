@@ -4,6 +4,8 @@
 
 ## 🔗 Links
 
+[![Kinetic Hosting](https://www.jewelexx.com/discount.png)](https://billing.kinetichosting.net/aff.php?aff=570)
+
 [![KoFi](https://img.shields.io/badge/KoFi-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/jewelexx)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 [![twitch](https://img.shields.io/twitch/status/possiblyjuliette?color=6441a5&label=I%20Rarely%20Stream&logo=twitch&style=for-the-badge)](https://twitch.tv/possiblyjuliette)
