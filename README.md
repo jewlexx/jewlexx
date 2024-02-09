@@ -16,7 +16,7 @@ I'm a full time student, and hobby developer
 
 👩‍💻 I'm currently working on silly little apps to make my life easier
 
-🧠 I'm currently learning Rust
+🧠 I'm currently learning C, C++ & Rust
 
 😄 She/Her
 
