@@ -22,6 +22,7 @@ I'm a full time student, and hobby developer
 
 ## 🛠️ Skills
 
+
 <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer noopener">
   <img
     src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/rust.svg"
@@ -40,7 +41,7 @@ I'm a full time student, and hobby developer
 </a>
 <a href="https://flutter.dev" target="_blank" rel="noreferrer noopener">
   <img
-    src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/flutter.svg"
+    src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/extra/flutter.svg"
     alt="Flutter"
     width="25"
     height="25"
