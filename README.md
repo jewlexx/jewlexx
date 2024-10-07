@@ -30,6 +30,22 @@ I'm a full time student, and hobby developer
     height="25"
   />
 </a>
+<a href="https://dart.dev" target="_blank" rel="noreferrer noopener">
+  <img
+    src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/dart.svg"
+    alt="Dart"
+    width="25"
+    height="25"
+  />
+</a>
+<a href="https://flutter.dev" target="_blank" rel="noreferrer noopener">
+  <img
+    src="https://raw.githubusercontent.com/0xShapeShifter/dev-story/master/public/images/skills/core/flutter.svg"
+    alt="Flutter"
+    width="25"
+    height="25"
+  />
+</a>
 <a href="https://www.learn-c.org" target="_blank" rel="noreferrer noopener">
   <img
     src="https://raw.githubusercontent.com/0xShapeShifter/readme-md/master/public/images/skills/core/c.svg"
