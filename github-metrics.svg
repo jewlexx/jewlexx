@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="810" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="783" class="">
     <defs>
         <style/>
     </defs>
@@ -272,7 +272,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/>
                             </svg>
-                            <span class="code">56269cbe</span>
+                            <span class="code">59af5d0a</span>
                             <span class="code">README.md</span>
                             <span class="code">
                                 <span class="snippet additions">++1</span>
@@ -284,7 +284,7 @@
                 <div class="row">
                     <section class="snippet">
                         <div class="body markdown">
-                            <code class="language-diff" xml:space="preserve"><span class="token coord">@@ -29,7 +29,7 @@</span><br /><span class="token unchanged"><span class="token prefix unchanged">·</span><span class="token line">|livesplit|A sleek, highly customizable timer for speedrunners.|1.8.33|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|powershell|PowerShell Core, the cross-platform task automation and configuration management framework/tool.|7.4.2|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|scarab|An installer for Hollow Knight mods written in Avalonia.|2.6.0.0|<br /></span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">|sfsu-beta|Stupid Fast Scoop Utilities. Incredibly fast replacements for commonly used Scoop commands, written in Rust.|1.17.0-beta.2|<br /></span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">|sfsu-beta|Stupid Fast Scoop Utilities. Incredibly fast replacements for commonly used Scoop commands, written in Rust.|1.17.0-beta.3|<br /></span></span><span class="token unchanged"><span class="token prefix unchanged">·</span><span class="token line">|sfsu|Stupid Fast Scoop Utilities. Incredibly fast replacements for commonly used Scoop commands, written in Rust.|1.16.0|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|signal|A cross-platform encrypted messaging service.|7.64.0|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|trunk|Build, bundle &amp; ship your Rust WASM application to the web. |0.21.14|</span></span></code>
+                            <code class="language-diff" xml:space="preserve"><span class="token coord">@@ -21,7 +21,7 @@</span><br /><span class="token unchanged"><span class="token prefix unchanged">·</span><span class="token line">|Clipboard|📋 Cut, copy, and paste anything, anywhere, all from the terminal. 😄 Easy, breezy, and beautiful.|0.10.0|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|dirkill|Fast, reliable and interactive directory deletion tool|0.2.1|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|evcxr|An evaluation context for Rust|0.21.1|<br /></span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">|flutter|Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop|3.32.8|<br /></span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">|flutter|Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop|3.35.1|<br /></span></span><span class="token unchanged"><span class="token prefix unchanged">·</span><span class="token line">|gh-cli|GitHub's official command line tool|2.76.2|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|ignoreit|Quickly load .gitignore templates|2.4.10|<br /></span><span class="token prefix unchanged">·</span><span class="token line">|lapce-nightly|Lightning-fast and Powerful Code Editor written in Rust|nightly|</span></span></code>
                         </div>
                     </section>
                 </div>
